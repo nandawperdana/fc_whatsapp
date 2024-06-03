@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		119E5E16D06663A146D0A062 /* Pods_WhatsappClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E70839B9C060100193CD013 /* Pods_WhatsappClone.framework */; };
+		E242B5072C0E0B0100642697 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B5062C0E0B0100642697 /* LoginViewController.swift */; };
 		E2B0CF7E2C0B619A006CA5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF7D2C0B619A006CA5A5 /* AppDelegate.swift */; };
 		E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF7F2C0B619A006CA5A5 /* SceneDelegate.swift */; };
 		E2B0CF822C0B619A006CA5A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF812C0B619A006CA5A5 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		29693084F529DEC70CB70848 /* Pods-WhatsappClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappClone.debug.xcconfig"; path = "Target Support Files/Pods-WhatsappClone/Pods-WhatsappClone.debug.xcconfig"; sourceTree = "<group>"; };
 		5E70839B9C060100193CD013 /* Pods_WhatsappClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsappClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E242B5062C0E0B0100642697 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E2B0CF7A2C0B619A006CA5A5 /* WhatsappClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsappClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B0CF7D2C0B619A006CA5A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2B0CF7F2C0B619A006CA5A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				E2B0CF862C0B619C006CA5A5 /* Assets.xcassets */,
 				E2B0CF882C0B619C006CA5A5 /* LaunchScreen.storyboard */,
 				E2B0CF8B2C0B619C006CA5A5 /* Info.plist */,
+				E242B5062C0E0B0100642697 /* LoginViewController.swift */,
 			);
 			path = WhatsappClone;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E242B5072C0E0B0100642697 /* LoginViewController.swift in Sources */,
 				E2B0CF822C0B619A006CA5A5 /* ViewController.swift in Sources */,
 				E2B0CF7E2C0B619A006CA5A5 /* AppDelegate.swift in Sources */,
 				E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */,

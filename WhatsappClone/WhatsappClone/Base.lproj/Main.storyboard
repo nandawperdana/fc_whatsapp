@@ -55,6 +55,9 @@
                                         <state key="normal" title="Forgot Password">
                                             <color key="titleColor" red="0.015686274509803921" green="0.28627450980392155" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotPasswordButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u73-d0-mth"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -68,6 +71,9 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.015686274510000001" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="42s-yF-Pin"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tKG-bh-Bfn">
                                 <rect key="frame" x="85" y="803" width="223" height="33"/>
@@ -85,6 +91,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" red="0.015686274510000001" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ani-Dw-JKy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -105,6 +114,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xwe-g1-hga" secondAttribute="trailing" constant="16" id="uN5-oa-n22"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="forgotPasswordButton" destination="9WK-gI-zXS" id="gDZ-pg-2WN"/>
+                        <outlet property="loginButton" destination="Yp6-ZS-KWu" id="FEI-jS-JSM"/>
+                        <outlet property="passwordTextField" destination="gWI-g3-sbn" id="nXA-wa-KVL"/>
+                        <outlet property="registerButton" destination="EP7-rb-xBD" id="dTG-e7-o2H"/>
+                        <outlet property="registerLabel" destination="lnf-mF-3I0" id="T1M-O4-Qoi"/>
+                        <outlet property="repeatPasswordTextField" destination="Tt6-LU-2Wx" id="PDh-xO-frO"/>
+                        <outlet property="usernameTextField" destination="84M-Xa-tn2" id="WNc-Dv-DM9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

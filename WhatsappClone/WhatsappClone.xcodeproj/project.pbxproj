@@ -15,6 +15,7 @@
 		E2B0CF852C0B619A006CA5A5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E2B0CF842C0B619A006CA5A5 /* Base */; };
 		E2B0CF872C0B619C006CA5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2B0CF862C0B619C006CA5A5 /* Assets.xcassets */; };
 		E2B0CF8A2C0B619C006CA5A5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E2B0CF892C0B619C006CA5A5 /* Base */; };
+		E2E9EBF02C11F019003E1B06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E9EBEF2C11F018003E1B06 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E2B0CF862C0B619C006CA5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2B0CF892C0B619C006CA5A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2B0CF8B2C0B619C006CA5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2E9EBEF2C11F018003E1B06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E74BB904DB28E19EF07052BE /* Pods-WhatsappClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappClone.release.xcconfig"; path = "Target Support Files/Pods-WhatsappClone/Pods-WhatsappClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 		E2B0CF7C2C0B619A006CA5A5 /* WhatsappClone */ = {
 			isa = PBXGroup;
 			children = (
+				E2E9EBEE2C11F005003E1B06 /* Model */,
 				E2B0CF7D2C0B619A006CA5A5 /* AppDelegate.swift */,
 				E2B0CF7F2C0B619A006CA5A5 /* SceneDelegate.swift */,
 				E2B0CF812C0B619A006CA5A5 /* ViewController.swift */,
@@ -92,6 +95,14 @@
 				E242B5062C0E0B0100642697 /* LoginViewController.swift */,
 			);
 			path = WhatsappClone;
+			sourceTree = "<group>";
+		};
+		E2E9EBEE2C11F005003E1B06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2E9EBEF2C11F018003E1B06 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +223,7 @@
 				E242B5072C0E0B0100642697 /* LoginViewController.swift in Sources */,
 				E2B0CF822C0B619A006CA5A5 /* ViewController.swift in Sources */,
 				E2B0CF7E2C0B619A006CA5A5 /* AppDelegate.swift in Sources */,
+				E2E9EBF02C11F019003E1B06 /* User.swift in Sources */,
 				E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

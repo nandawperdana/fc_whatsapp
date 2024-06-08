@@ -15,6 +15,7 @@
 		E2B0CF852C0B619A006CA5A5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E2B0CF842C0B619A006CA5A5 /* Base */; };
 		E2B0CF872C0B619C006CA5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2B0CF862C0B619C006CA5A5 /* Assets.xcassets */; };
 		E2B0CF8A2C0B619C006CA5A5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E2B0CF892C0B619C006CA5A5 /* Base */; };
+		E2BC5D022C14A4B900654538 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC5D012C14A4B900654538 /* Constants.swift */; };
 		E2E9EBF02C11F019003E1B06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E9EBEF2C11F018003E1B06 /* User.swift */; };
 		E2E9EBF72C11F461003E1B06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		E2B0CF862C0B619C006CA5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2B0CF892C0B619C006CA5A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2B0CF8B2C0B619C006CA5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2BC5D012C14A4B900654538 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E2E9EBEF2C11F018003E1B06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E74BB904DB28E19EF07052BE /* Pods-WhatsappClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappClone.release.xcconfig"; path = "Target Support Files/Pods-WhatsappClone/Pods-WhatsappClone.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				E2B0CF882C0B619C006CA5A5 /* LaunchScreen.storyboard */,
 				E2B0CF8B2C0B619C006CA5A5 /* Info.plist */,
 				E242B5062C0E0B0100642697 /* LoginViewController.swift */,
+				E2BC5D012C14A4B900654538 /* Constants.swift */,
 			);
 			path = WhatsappClone;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				E2B0CF7E2C0B619A006CA5A5 /* AppDelegate.swift in Sources */,
 				E2E9EBF02C11F019003E1B06 /* User.swift in Sources */,
 				E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */,
+				E2BC5D022C14A4B900654538 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

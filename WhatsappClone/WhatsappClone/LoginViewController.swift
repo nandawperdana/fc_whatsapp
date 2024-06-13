@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPasswordButtonTap(_ sender: Any) {
-        print("forgotPasswordButtonTap")
+        forgotPassword()
     }
     
     @IBAction func registerButtonTap(_ sender: UIButton) {
@@ -64,14 +64,46 @@ class LoginViewController: UIViewController {
     }
     
     private func login() {
-        print(usernameTextField.text ?? "")
-        print(passwordTextField.text ?? "")
+        FirebaseUserListener.shared.loginUser(email: usernameTextField.text!, password: passwordTextField.text!) { error, isEmailVerified in
+            if error == nil {
+                self.navigateToMainScreen()
+                //                if !isEmailVerified {
+                //                    ProgressHUD.failed("Verify your email first")
+                //                } else {
+                //                    ProgressHUD.success("Login Success")
+                //                }
+            } else {
+                ProgressHUD.failed("Login error: " + error!.localizedDescription)
+            }
+        }
     }
     
     private func register() {
-        print(usernameTextField.text ?? "")
-        print(passwordTextField.text ?? "")
-        print(repeatPasswordTextField.text ?? "")
+        if passwordTextField.text! == repeatPasswordTextField.text! {
+            FirebaseUserListener.shared.registerUserWith(email: usernameTextField.text!, password: passwordTextField.text!) { error in
+                if error == nil {
+                    ProgressHUD.success("Registration successful")
+                } else {
+                    ProgressHUD.failed("Failed to register " + error!.localizedDescription)
+                }
+            }
+        } else {
+            ProgressHUD.failed("Password doesn't match")
+        }
+    }
+    
+    private func forgotPassword() {
+        FirebaseUserListener.shared.resetPassword(email: usernameTextField.text!) { error in
+            if error == nil {
+                ProgressHUD.success("Reset link sent to your email")
+            } else {
+                ProgressHUD.failed("Reset password error: " + error!.localizedDescription)
+            }
+        }
+    }
+    
+    private func navigateToMainScreen() {
+        print("Navigate")
     }
 }
 

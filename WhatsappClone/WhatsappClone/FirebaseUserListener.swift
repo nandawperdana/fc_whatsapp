@@ -66,11 +66,19 @@ class FirebaseUserListener {
         }
     }
     
+    // MARK: - Reset Password
+    func resetPassword(email: String, completion: @escaping (_ error: Error?) -> Void) {
+        // Firebase Auth
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            completion(error)
+        }
+    }
+    
     // Function for send email verification
     private func sendEmailVerificationTo(_ user: FirebaseAuth.User) {
         user.sendEmailVerification { error in
             if let e = error {
-                print("Error sending email verification")
+                print("Error sending email verification: ", e.localizedDescription)
             } else {
                 print("Success sent email verification")
             }

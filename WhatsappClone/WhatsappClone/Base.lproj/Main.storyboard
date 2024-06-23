@@ -271,7 +271,7 @@
                         <outlet property="avatarImageView" destination="D7x-A2-ies" id="3zk-Xn-yrn"/>
                         <outlet property="statusLabel" destination="8is-mv-TCu" id="UgC-ga-yV4"/>
                         <outlet property="userNameLabel" destination="lHQ-CE-MbS" id="Uwl-sX-ROL"/>
-                        <segue destination="XwO-tQ-tnW" kind="show" id="P6k-3m-oeP"/>
+                        <segue destination="XwO-tQ-tnW" kind="show" identifier="editProfileSegue" id="P6k-3m-oeP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHx-1s-VpA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -281,7 +281,7 @@
         <!--Edit Profile-->
         <scene sceneID="Jqm-rA-LGU">
             <objects>
-                <tableViewController id="XwO-tQ-tnW" sceneMemberID="viewController">
+                <tableViewController id="XwO-tQ-tnW" customClass="EditTableViewController" customModule="WhatsappClone" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="bwJ-ub-yIT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -321,6 +321,9 @@
                                                     <buttonConfiguration key="configuration" style="plain" title="Edit">
                                                         <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="editButtonTap:" destination="XwO-tQ-tnW" eventType="touchUpInside" id="EsW-Jq-YV7"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -341,7 +344,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="84a-Xo-3bw">
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84a-Xo-3bw">
                                                     <rect key="frame" x="16" y="11" width="361" height="22"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
@@ -359,7 +362,7 @@
                             <tableViewSection id="9ER-Op-AQc">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="5Cs-xQ-cvB">
-                                        <rect key="frame" x="0.0" y="197.66666793823245" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="197.66666793823242" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Cs-xQ-cvB" id="FxY-I6-6Lv">
                                             <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
@@ -388,6 +391,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Edit Profile" largeTitleDisplayMode="never" id="C4E-TN-88i"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="Dpx-2y-kM0" id="dXh-R1-aBK"/>
+                        <outlet property="statusLabel" destination="7Ym-Qp-1iR" id="iOG-zy-SiP"/>
+                        <outlet property="usernameTextField" destination="84a-Xo-3bw" id="vAd-ml-YkV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i2l-fA-uyl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

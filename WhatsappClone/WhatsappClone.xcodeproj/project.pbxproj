@@ -12,6 +12,7 @@
 		E242B5072C0E0B0100642697 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B5062C0E0B0100642697 /* LoginViewController.swift */; };
 		E26AE1002C1895FA0095C9D0 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */; };
 		E26AE1022C1896E70095C9D0 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */; };
+		E2A57A8C2C280C2D005BBD40 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A57A8B2C280C2D005BBD40 /* EditTableViewController.swift */; };
 		E2B0CF7E2C0B619A006CA5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF7D2C0B619A006CA5A5 /* AppDelegate.swift */; };
 		E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF7F2C0B619A006CA5A5 /* SceneDelegate.swift */; };
 		E2B0CF822C0B619A006CA5A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF812C0B619A006CA5A5 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		E242B5062C0E0B0100642697 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
+		E2A57A8B2C280C2D005BBD40 /* EditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		E2B0CF7A2C0B619A006CA5A5 /* WhatsappClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsappClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B0CF7D2C0B619A006CA5A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2B0CF7F2C0B619A006CA5A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E2A57A892C280B8D005BBD40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2A57A8A2C280BCB005BBD40 /* SettingsView */,
+				E2B0CF812C0B619A006CA5A5 /* ViewController.swift */,
+				E242B5062C0E0B0100642697 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E2A57A8A2C280BCB005BBD40 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				E217CF5E2C2724EC00E554AD /* SettingsTableViewController.swift */,
+				E2A57A8B2C280C2D005BBD40 /* EditTableViewController.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
 		E2B0CF712C0B619A006CA5A5 = {
 			isa = PBXGroup;
 			children = (
@@ -94,20 +115,18 @@
 		E2B0CF7C2C0B619A006CA5A5 /* WhatsappClone */ = {
 			isa = PBXGroup;
 			children = (
+				E2A57A892C280B8D005BBD40 /* View */,
 				E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */,
 				E2E9EBEE2C11F005003E1B06 /* Model */,
 				E2B0CF7D2C0B619A006CA5A5 /* AppDelegate.swift */,
 				E2B0CF7F2C0B619A006CA5A5 /* SceneDelegate.swift */,
-				E2B0CF812C0B619A006CA5A5 /* ViewController.swift */,
 				E2B0CF832C0B619A006CA5A5 /* Main.storyboard */,
 				E2B0CF862C0B619C006CA5A5 /* Assets.xcassets */,
 				E2B0CF882C0B619C006CA5A5 /* LaunchScreen.storyboard */,
 				E2B0CF8B2C0B619C006CA5A5 /* Info.plist */,
-				E242B5062C0E0B0100642697 /* LoginViewController.swift */,
 				E2BC5D012C14A4B900654538 /* Constants.swift */,
 				E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */,
 				E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */,
-				E217CF5E2C2724EC00E554AD /* SettingsTableViewController.swift */,
 			);
 			path = WhatsappClone;
 			sourceTree = "<group>";
@@ -239,6 +258,7 @@
 				E242B5072C0E0B0100642697 /* LoginViewController.swift in Sources */,
 				E2B0CF822C0B619A006CA5A5 /* ViewController.swift in Sources */,
 				E2B0CF7E2C0B619A006CA5A5 /* AppDelegate.swift in Sources */,
+				E2A57A8C2C280C2D005BBD40 /* EditTableViewController.swift in Sources */,
 				E26AE1022C1896E70095C9D0 /* FirebaseUserListener.swift in Sources */,
 				E2E9EBF02C11F019003E1B06 /* User.swift in Sources */,
 				E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */,

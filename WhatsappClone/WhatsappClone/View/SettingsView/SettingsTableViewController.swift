@@ -27,6 +27,15 @@ class SettingsTableViewController: UITableViewController {
         fetchUserInfo()
     }
     
+    // MARK: - Table View Delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    
+        if indexPath.section == 0 && indexPath.row == 0 {
+            performSegue(withIdentifier: "editProfileSegue", sender: self)
+        }
+    }
+    
     // MARK: - IBActions
     @IBAction func tellAFriendButtonTap(_ sender: Any) {
         print("tell a friend")

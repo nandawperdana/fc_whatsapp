@@ -13,6 +13,8 @@
 		E26AE1002C1895FA0095C9D0 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */; };
 		E26AE1022C1896E70095C9D0 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */; };
 		E2A57A8C2C280C2D005BBD40 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A57A8B2C280C2D005BBD40 /* EditTableViewController.swift */; };
+		E2A57A8F2C283687005BBD40 /* FirebaseStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A57A8E2C283687005BBD40 /* FirebaseStorageHelper.swift */; };
+		E2A57A922C287124005BBD40 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A57A912C287124005BBD40 /* Util.swift */; };
 		E2B0CF7E2C0B619A006CA5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF7D2C0B619A006CA5A5 /* AppDelegate.swift */; };
 		E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF7F2C0B619A006CA5A5 /* SceneDelegate.swift */; };
 		E2B0CF822C0B619A006CA5A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF812C0B619A006CA5A5 /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 		E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
 		E2A57A8B2C280C2D005BBD40 /* EditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
+		E2A57A8E2C283687005BBD40 /* FirebaseStorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageHelper.swift; sourceTree = "<group>"; };
+		E2A57A912C287124005BBD40 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		E2B0CF7A2C0B619A006CA5A5 /* WhatsappClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsappClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B0CF7D2C0B619A006CA5A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2B0CF7F2C0B619A006CA5A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,8 +103,17 @@
 			children = (
 				E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */,
 				E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */,
+				E2A57A8E2C283687005BBD40 /* FirebaseStorageHelper.swift */,
 			);
 			path = FirebaseHelper;
+			sourceTree = "<group>";
+		};
+		E2A57A902C287114005BBD40 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E2A57A912C287124005BBD40 /* Util.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		E2B0CF712C0B619A006CA5A5 = {
@@ -124,6 +137,7 @@
 		E2B0CF7C2C0B619A006CA5A5 /* WhatsappClone */ = {
 			isa = PBXGroup;
 			children = (
+				E2A57A902C287114005BBD40 /* Helper */,
 				E2A57A8D2C28360F005BBD40 /* FirebaseHelper */,
 				E2A57A892C280B8D005BBD40 /* View */,
 				E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */,
@@ -270,6 +284,8 @@
 				E26AE1022C1896E70095C9D0 /* FirebaseUserListener.swift in Sources */,
 				E2E9EBF02C11F019003E1B06 /* User.swift in Sources */,
 				E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */,
+				E2A57A922C287124005BBD40 /* Util.swift in Sources */,
+				E2A57A8F2C283687005BBD40 /* FirebaseStorageHelper.swift in Sources */,
 				E26AE1002C1895FA0095C9D0 /* FCollectionReference.swift in Sources */,
 				E2BC5D022C14A4B900654538 /* Constants.swift in Sources */,
 				E217CF5F2C2724EC00E554AD /* SettingsTableViewController.swift in Sources */,

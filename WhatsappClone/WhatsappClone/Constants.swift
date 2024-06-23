@@ -8,3 +8,4 @@
 import Foundation
 
 public let kCurrentUser = "key_current_user"
+public let kStorageReference = "gs://whatsappclone-b7c74.appspot.com"

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import YPImagePicker
 
 class EditTableViewController: UITableViewController {
     // MARK: - IBOutlets
@@ -15,6 +16,9 @@ class EditTableViewController: UITableViewController {
     
     @IBOutlet weak var statusLabel: UILabel!
     
+    // MARK: - Vars
+    var picker: YPImagePicker?
+    
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +27,7 @@ class EditTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         
         configureUsernameTextField()
+        configureImagePicker()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,8 +37,8 @@ class EditTableViewController: UITableViewController {
     }
     
     // MARK: - IBActions
-    
     @IBAction func editButtonTap(_ sender: Any) {
+        showPicker()
     }
     
     // MARK: - Update UI
@@ -51,6 +56,34 @@ class EditTableViewController: UITableViewController {
     private func configureUsernameTextField() {
         usernameTextField.delegate = self
         usernameTextField.clearButtonMode = .whileEditing
+    }
+    
+    private func configureImagePicker() {
+        var config = YPImagePickerConfiguration()
+        config.showsPhotoFilters = false
+        config.screens = [.library]
+        config.library.maxNumberOfItems = 3
+        
+        picker = YPImagePicker(configuration: config)
+    }
+    
+    private func showPicker() {
+        guard let picker = picker else { return }
+        
+        picker.didFinishPicking { [unowned picker] items, canceled in
+            if canceled {
+                // cancel
+            }
+            
+            if let photo = items.singlePhoto {
+                DispatchQueue.main.async {
+                    self.avatarImageView.image = photo.image
+                }
+            }
+            picker.dismiss(animated: true, completion: nil)
+        }
+        
+        present(picker, animated: true, completion: nil)
     }
     
     // MARK: - Table View Delegate

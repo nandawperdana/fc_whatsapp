@@ -94,6 +94,15 @@
 			path = SettingsView;
 			sourceTree = "<group>";
 		};
+		E2A57A8D2C28360F005BBD40 /* FirebaseHelper */ = {
+			isa = PBXGroup;
+			children = (
+				E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */,
+				E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */,
+			);
+			path = FirebaseHelper;
+			sourceTree = "<group>";
+		};
 		E2B0CF712C0B619A006CA5A5 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +124,7 @@
 		E2B0CF7C2C0B619A006CA5A5 /* WhatsappClone */ = {
 			isa = PBXGroup;
 			children = (
+				E2A57A8D2C28360F005BBD40 /* FirebaseHelper */,
 				E2A57A892C280B8D005BBD40 /* View */,
 				E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */,
 				E2E9EBEE2C11F005003E1B06 /* Model */,
@@ -125,8 +135,6 @@
 				E2B0CF882C0B619C006CA5A5 /* LaunchScreen.storyboard */,
 				E2B0CF8B2C0B619C006CA5A5 /* Info.plist */,
 				E2BC5D012C14A4B900654538 /* Constants.swift */,
-				E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */,
-				E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */,
 			);
 			path = WhatsappClone;
 			sourceTree = "<group>";

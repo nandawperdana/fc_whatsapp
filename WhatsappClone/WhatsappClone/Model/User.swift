@@ -11,6 +11,7 @@ import Firebase
 struct User: Codable, Equatable {
     var id = ""
     var username: String
+//    var status: String
     var email: String
     var pushId = ""
     var avatar = ""

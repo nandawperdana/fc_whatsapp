@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="WhatsappClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" id="BYZ-38-t0r" customClass="LoginViewController" customModule="WhatsappClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,7 +148,7 @@
         <!--Settings-->
         <scene sceneID="fRX-JY-fgH">
             <objects>
-                <tableViewController id="8ol-IG-TDD" sceneMemberID="viewController">
+                <tableViewController id="8ol-IG-TDD" customClass="SettingsTableViewController" customModule="WhatsappClone" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="ftm-Bh-XqS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,19 +216,23 @@
                                                         <constraint firstAttribute="height" constant="30" id="hGa-PJ-dUs"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell a Friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQC-yF-ue1">
-                                                    <rect key="frame" x="54" y="11.666666666666664" width="300.66666666666669" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPb-o9-PfP">
+                                                    <rect key="frame" x="54" y="4.6666666666666679" width="300.66666666666669" height="35"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Tell a Friend">
+                                                        <color key="baseForegroundColor" name="label"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="tellAFriendButtonTap:" destination="8ol-IG-TDD" eventType="touchUpInside" id="ZmF-qb-uaj"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="dQC-yF-ue1" firstAttribute="centerY" secondItem="3rw-jv-Acf" secondAttribute="centerY" id="0Eg-YX-hN2"/>
+                                                <constraint firstItem="FPb-o9-PfP" firstAttribute="centerY" secondItem="3rw-jv-Acf" secondAttribute="centerY" id="4Uj-Gm-jqh"/>
+                                                <constraint firstAttribute="trailing" secondItem="FPb-o9-PfP" secondAttribute="trailing" constant="8" id="PWy-bC-SR8"/>
                                                 <constraint firstItem="pPx-BO-RDC" firstAttribute="leading" secondItem="3rw-jv-Acf" secondAttribute="leading" constant="16" id="Sq8-rG-7wP"/>
                                                 <constraint firstItem="pPx-BO-RDC" firstAttribute="centerY" secondItem="3rw-jv-Acf" secondAttribute="centerY" id="eAe-M6-4fM"/>
-                                                <constraint firstItem="dQC-yF-ue1" firstAttribute="leading" secondItem="pPx-BO-RDC" secondAttribute="trailing" constant="8" id="es4-3o-TUX"/>
-                                                <constraint firstAttribute="trailing" secondItem="dQC-yF-ue1" secondAttribute="trailing" constant="8" id="kBV-z0-9bF"/>
+                                                <constraint firstItem="FPb-o9-PfP" firstAttribute="leading" secondItem="pPx-BO-RDC" secondAttribute="trailing" constant="8" id="q9x-gr-ZQ5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -243,6 +247,9 @@
                                                     <rect key="frame" x="157.66666666666666" y="4.6666666666666679" width="78" height="35"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                                    <connections>
+                                                        <action selector="logoutButtonTap:" destination="8ol-IG-TDD" eventType="touchUpInside" id="kQy-tZ-Iii"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -260,6 +267,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="aY0-o5-3Kj"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="D7x-A2-ies" id="3zk-Xn-yrn"/>
+                        <outlet property="statusLabel" destination="8is-mv-TCu" id="UgC-ga-yV4"/>
+                        <outlet property="userNameLabel" destination="lHQ-CE-MbS" id="Uwl-sX-ROL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DHx-1s-VpA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,6 +338,9 @@
         <image name="message" catalog="system" width="128" height="116"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="label">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

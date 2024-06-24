@@ -23,26 +23,26 @@ class ProfileTableViewController: UITableViewController {
         navigationItem.largeTitleDisplayMode = .never
         tableView.tableHeaderView = UIView()
         tableView.tableFooterView = UIView()
+        tableView.separatorStyle = .none
         
         setupUI()
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    // MARK: - Table view Delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Navigate to chat screen
+        if indexPath.section == 1 {
+            print("Navigate to chat screen")
+        }
     }
     
     // MARK: - Setup UI
     private func setupUI() {
-        guard let user = self.user else { return }
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.width / 2
         
+        guard let user = self.user else { return }
         usernameLabel.text = user.username
         statusLabel.text = user.status
         

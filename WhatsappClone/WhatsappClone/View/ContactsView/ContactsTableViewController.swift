@@ -52,7 +52,9 @@ class ContactsTableViewController: UITableViewController {
     // MARK: - Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        // TODO: show user details
+        
+        let user = searchController.isActive ? filteredUsers[indexPath.row] : allUsers[indexPath.row]
+        navigateToProfileScreen(user)
     }
     
     // MARK: - Setup UI
@@ -95,6 +97,14 @@ class ContactsTableViewController: UITableViewController {
             return user.username.lowercased().contains(text.lowercased())
         })
         tableView.reloadData()
+    }
+    
+    // MARK: - Navigation
+    private func navigateToProfileScreen(_ user: User) {
+        let profileView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ProfileView") as! ProfileTableViewController
+        
+        profileView.user = user
+        self.navigationController?.pushViewController(profileView, animated: true)
     }
 }
 

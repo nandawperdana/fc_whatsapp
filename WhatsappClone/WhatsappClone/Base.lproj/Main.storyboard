@@ -401,22 +401,6 @@
             </objects>
             <point key="canvasLocation" x="3609.9236641221373" y="1005.6338028169015"/>
         </scene>
-        <!--Contacts-->
-        <scene sceneID="5vp-Gx-WcO">
-            <objects>
-                <viewController id="EZC-Fj-59J" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VRw-Dw-6fK">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="T8j-lE-42k"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Contacts" image="person.circle" catalog="system" id="6Bw-3N-BnO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8nD-m6-62W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1765" y="-313"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZLt-1R-k84">
             <objects>
@@ -427,7 +411,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="EZC-Fj-59J" kind="relationship" relationship="viewControllers" id="gO9-mm-8h5"/>
+                        <segue destination="skf-Gc-T9Q" kind="relationship" relationship="viewControllers" id="gO9-mm-8h5"/>
                         <segue destination="1ed-Py-szV" kind="relationship" relationship="viewControllers" id="fwA-6f-8qI"/>
                         <segue destination="p08-6x-NIR" kind="relationship" relationship="viewControllers" id="83v-G5-23n"/>
                     </connections>
@@ -454,6 +438,90 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zaH-16-rTX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1762.5954198473282" y="1005.6338028169015"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="3cY-IC-3hk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="skf-Gc-T9Q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contacts" image="person.circle" catalog="system" id="6Bw-3N-BnO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="I90-4X-eb5">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QSg-3C-WdT" kind="relationship" relationship="rootViewController" id="0cn-mK-FXG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bI1-Nm-2ys" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764.1221374045801" y="-313.38028169014086"/>
+        </scene>
+        <!--Contacts-->
+        <scene sceneID="URm-rz-uvD">
+            <objects>
+                <tableViewController id="QSg-3C-WdT" customClass="ContactsTableViewController" customModule="WhatsappClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="cwf-M4-3fh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="80" id="47q-2b-jwr" customClass="ContactsTableViewCell" customModule="WhatsappClone" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="47q-2b-jwr" id="I9a-rv-rOf">
+                                    <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KGx-gW-wPi">
+                                            <rect key="frame" x="20" y="15" width="52" height="50.666666666666671"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="52" id="Mzv-Yr-psY"/>
+                                                <constraint firstAttribute="height" constant="52" id="rMb-xF-VpY"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oda-ni-3iu">
+                                            <rect key="frame" x="80" y="10" width="282.66666666666669" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDp-ws-Ae6">
+                                            <rect key="frame" x="80" y="47" width="282.66666666666669" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oda-ni-3iu" firstAttribute="leading" secondItem="KGx-gW-wPi" secondAttribute="trailing" constant="8" id="2hr-70-DnV"/>
+                                        <constraint firstItem="KGx-gW-wPi" firstAttribute="centerY" secondItem="I9a-rv-rOf" secondAttribute="centerY" id="3dW-f3-Pkm"/>
+                                        <constraint firstItem="KGx-gW-wPi" firstAttribute="leading" secondItem="I9a-rv-rOf" secondAttribute="leadingMargin" id="NQM-bM-tOQ"/>
+                                        <constraint firstItem="oda-ni-3iu" firstAttribute="top" secondItem="I9a-rv-rOf" secondAttribute="top" constant="10" id="O9c-5A-meG"/>
+                                        <constraint firstAttribute="trailing" secondItem="oda-ni-3iu" secondAttribute="trailing" id="Ryg-Cf-TpC"/>
+                                        <constraint firstItem="DDp-ws-Ae6" firstAttribute="leading" secondItem="KGx-gW-wPi" secondAttribute="trailing" constant="8" id="ZOm-kf-aHG"/>
+                                        <constraint firstAttribute="bottom" secondItem="DDp-ws-Ae6" secondAttribute="bottom" constant="16" id="aBs-ry-gEs"/>
+                                        <constraint firstAttribute="trailing" secondItem="DDp-ws-Ae6" secondAttribute="trailing" id="kxt-2G-9U3"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="KGx-gW-wPi" id="Jph-E1-m52"/>
+                                    <outlet property="statusLabel" destination="DDp-ws-Ae6" id="v7j-Ta-Nf3"/>
+                                    <outlet property="usernameLabel" destination="oda-ni-3iu" id="B6N-GA-BKT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QSg-3C-WdT" id="S4g-oA-HCb"/>
+                            <outlet property="delegate" destination="QSg-3C-WdT" id="ySJ-A0-DJq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Contacts" id="EM6-Of-C0a"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aPZ-dc-cCQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2687.7862595419847" y="-313.38028169014086"/>
         </scene>
     </scenes>
     <resources>

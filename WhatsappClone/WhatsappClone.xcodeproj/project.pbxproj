@@ -15,6 +15,8 @@
 		E2A57A8C2C280C2D005BBD40 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A57A8B2C280C2D005BBD40 /* EditTableViewController.swift */; };
 		E2A57A8F2C283687005BBD40 /* FirebaseStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A57A8E2C283687005BBD40 /* FirebaseStorageHelper.swift */; };
 		E2A57A922C287124005BBD40 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A57A912C287124005BBD40 /* Util.swift */; };
+		E2A57A952C29046D005BBD40 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A57A942C29046D005BBD40 /* ContactsTableViewCell.swift */; };
+		E2A57A972C290501005BBD40 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A57A962C290501005BBD40 /* ContactsTableViewController.swift */; };
 		E2B0CF7E2C0B619A006CA5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF7D2C0B619A006CA5A5 /* AppDelegate.swift */; };
 		E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF7F2C0B619A006CA5A5 /* SceneDelegate.swift */; };
 		E2B0CF822C0B619A006CA5A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF812C0B619A006CA5A5 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 		E2A57A8B2C280C2D005BBD40 /* EditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		E2A57A8E2C283687005BBD40 /* FirebaseStorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageHelper.swift; sourceTree = "<group>"; };
 		E2A57A912C287124005BBD40 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		E2A57A942C29046D005BBD40 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		E2A57A962C290501005BBD40 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		E2B0CF7A2C0B619A006CA5A5 /* WhatsappClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsappClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B0CF7D2C0B619A006CA5A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2B0CF7F2C0B619A006CA5A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 		E2A57A892C280B8D005BBD40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E2A57A932C290443005BBD40 /* ContactsView */,
 				E2A57A8A2C280BCB005BBD40 /* SettingsView */,
 				E2B0CF812C0B619A006CA5A5 /* ViewController.swift */,
 				E242B5062C0E0B0100642697 /* LoginViewController.swift */,
@@ -114,6 +119,15 @@
 				E2A57A912C287124005BBD40 /* Util.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		E2A57A932C290443005BBD40 /* ContactsView */ = {
+			isa = PBXGroup;
+			children = (
+				E2A57A942C29046D005BBD40 /* ContactsTableViewCell.swift */,
+				E2A57A962C290501005BBD40 /* ContactsTableViewController.swift */,
+			);
+			path = ContactsView;
 			sourceTree = "<group>";
 		};
 		E2B0CF712C0B619A006CA5A5 = {
@@ -281,7 +295,9 @@
 				E2B0CF822C0B619A006CA5A5 /* ViewController.swift in Sources */,
 				E2B0CF7E2C0B619A006CA5A5 /* AppDelegate.swift in Sources */,
 				E2A57A8C2C280C2D005BBD40 /* EditTableViewController.swift in Sources */,
+				E2A57A952C29046D005BBD40 /* ContactsTableViewCell.swift in Sources */,
 				E26AE1022C1896E70095C9D0 /* FirebaseUserListener.swift in Sources */,
+				E2A57A972C290501005BBD40 /* ContactsTableViewController.swift in Sources */,
 				E2E9EBF02C11F019003E1B06 /* User.swift in Sources */,
 				E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */,
 				E2A57A922C287124005BBD40 /* Util.swift in Sources */,

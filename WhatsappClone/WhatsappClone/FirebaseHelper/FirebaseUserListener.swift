@@ -135,6 +135,50 @@ class FirebaseUserListener {
         }
     }
     
+    func downloadAllUsersFromFirestore(completion: @escaping (_ allUsers: [User]) -> Void) {
+        var users: [User] = []
+        
+        FirebaseReference(.User).limit(to: kLimitDownload).getDocuments { snapshot, error in
+            guard let document = snapshot?.documents else {
+                print("No documents in database")
+                return
+            }
+            
+            let allUsers = document.compactMap { querySnapshot in
+                return try? querySnapshot.data(as: User.self)
+            }
+            
+            for user in allUsers {
+                if User.currentID != user.id {
+                    users.append(user)
+                }
+            }
+            completion(users)
+        }
+    }
+    
+    func downloadUsersFromFirestore(withIds: [String], completion: @escaping (_ allUsers: [User]) -> Void) {
+        var users: [User] = []
+        var count = 0
+        
+        for id in withIds {
+            FirebaseReference(.User).document(id).getDocument { snapshot, error in
+                guard let document = snapshot else {
+                    print("No document found")
+                    return
+                }
+                
+                let user = try? document.data(as: User.self)
+                users.append(user!)
+                count += 1
+                
+                if count == withIds.count {
+                    completion(users)
+                }
+            }
+        }
+    }
+    
     // MARK: - Logout
     func logoutUser(completion: @escaping (_ error: Error?) -> Void) {
         do {

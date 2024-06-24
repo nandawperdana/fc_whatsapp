@@ -88,7 +88,7 @@ class FirebaseUserListener {
     // Function to save user to UserDefaults
     private func saveUser(email: String, uid: String) {
         // Create object of User
-        let user = User(id: uid, username: email, email: email, avatar: "", firstName: "", lastName: "")
+        let user = User(id: uid, username: email, status: "Available", email: email, avatar: "", firstName: "", lastName: "")
         
         // Save user to UserDefaults
         saveUserLocally(user)

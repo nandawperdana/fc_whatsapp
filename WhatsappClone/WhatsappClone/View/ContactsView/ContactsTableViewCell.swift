@@ -23,8 +23,9 @@ class ContactsTableViewCell: UITableViewCell {
     }
 
     func configure(user: User) {
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.width / 2
         usernameLabel.text = user.username
-        statusLabel.text = ""
+        statusLabel.text = user.status
         setAvatar(avatar: user.avatar)
     }
     

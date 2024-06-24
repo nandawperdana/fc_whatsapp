@@ -44,7 +44,7 @@ class EditTableViewController: UITableViewController {
     private func fetchUserInfo() {
         if let user = User.currentUser {
             usernameTextField.text = user.username
-            statusLabel.text = ""
+            statusLabel.text = user.status
             
             if user.avatar != "" {
                 FirebaseStorageHelper.downloadImage(url: user.avatar) { image in

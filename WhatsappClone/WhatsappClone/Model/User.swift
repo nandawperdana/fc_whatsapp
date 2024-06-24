@@ -11,7 +11,7 @@ import Firebase
 struct User: Codable, Equatable {
     var id = ""
     var username: String
-//    var status: String
+    var status: String
     var email: String
     var pushId = ""
     var avatar = ""
@@ -52,5 +52,34 @@ func saveUserLocally(_ user: User) {
         UserDefaults.standard.set(data, forKey: kCurrentUser)
     } catch {
         print("Failed to encode userObject", error.localizedDescription)
+    }
+}
+
+func createDummyUsers() {
+    print("Creating dummy users...")
+    
+    let names = ["Alex", "Budi", "Cinta", "Dewa", "Eli"]
+    
+    var imageIdx = 1
+    var userIdx = 1
+    
+    for i in 0..<5 {
+        let id = UUID().uuidString
+        
+        let fileDirectory = "Avatars/" + "_\(id)" + ".jpg"
+        
+        let image = UIImage(named: "user\(imageIdx)")!
+        
+        FirebaseStorageHelper.uploadImage(image, directory: fileDirectory) { imageLink in
+            let user = User(id: id, username: names[i], status: "Available", email: "user\(userIdx)@mail.com", avatar: imageLink ?? "")
+            
+            userIdx += 1
+            FirebaseUserListener.shared.saveUserToFirestore(user)
+        }
+        
+        imageIdx += 1
+        if imageIdx == 5 {
+            imageIdx = 1
+        }
     }
 }

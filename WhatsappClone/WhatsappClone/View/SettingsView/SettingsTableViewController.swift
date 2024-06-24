@@ -60,7 +60,7 @@ class SettingsTableViewController: UITableViewController {
     private func fetchUserInfo() {
         if let user = User.currentUser {
             userNameLabel.text = user.username
-            statusLabel.text = ""
+            statusLabel.text = user.status
             
             if user.avatar != "" {
                 FirebaseStorageHelper.downloadImage(url: user.avatar) { image in

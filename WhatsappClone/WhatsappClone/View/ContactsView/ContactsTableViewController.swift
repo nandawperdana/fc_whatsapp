@@ -14,12 +14,12 @@ class ContactsTableViewController: UITableViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
     
-    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Setup UI
+        setupRefreshControl()
         setupSearchBar()
         
 //        createDummyUsers()
@@ -28,6 +28,13 @@ class ContactsTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     // MARK: - Table view data source
@@ -49,6 +56,11 @@ class ContactsTableViewController: UITableViewController {
     }
     
     // MARK: - Setup UI
+    private func setupRefreshControl() {
+        self.refreshControl = UIRefreshControl()
+        self.tableView.refreshControl = refreshControl
+    }
+    
     private func setupSearchBar() {
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = true
@@ -57,6 +69,15 @@ class ContactsTableViewController: UITableViewController {
         searchController.searchBar.placeholder = "Search Contact"
         searchController.searchResultsUpdater = self
         definesPresentationContext = true
+    }
+    
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        guard let refreshControl = self.refreshControl else { return }
+        
+        if refreshControl.isRefreshing {
+            self.fetchUsersData()
+            refreshControl.endRefreshing()
+        }
     }
     
     // MARK: - Fetch Data

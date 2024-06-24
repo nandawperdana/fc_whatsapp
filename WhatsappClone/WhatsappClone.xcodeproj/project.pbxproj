@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		119E5E16D06663A146D0A062 /* Pods_WhatsappClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E70839B9C060100193CD013 /* Pods_WhatsappClone.framework */; };
 		E217CF5F2C2724EC00E554AD /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E217CF5E2C2724EC00E554AD /* SettingsTableViewController.swift */; };
+		E22CA0ED2C29D37300A736AE /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22CA0EC2C29D37300A736AE /* ProfileTableViewController.swift */; };
 		E242B5072C0E0B0100642697 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B5062C0E0B0100642697 /* LoginViewController.swift */; };
 		E26AE1002C1895FA0095C9D0 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */; };
 		E26AE1022C1896E70095C9D0 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */; };
@@ -32,6 +33,7 @@
 		29693084F529DEC70CB70848 /* Pods-WhatsappClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappClone.debug.xcconfig"; path = "Target Support Files/Pods-WhatsappClone/Pods-WhatsappClone.debug.xcconfig"; sourceTree = "<group>"; };
 		5E70839B9C060100193CD013 /* Pods_WhatsappClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsappClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E217CF5E2C2724EC00E554AD /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		E22CA0EC2C29D37300A736AE /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		E242B5062C0E0B0100642697 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				E2A57A8A2C280BCB005BBD40 /* SettingsView */,
 				E2B0CF812C0B619A006CA5A5 /* ViewController.swift */,
 				E242B5062C0E0B0100642697 /* LoginViewController.swift */,
+				E22CA0EC2C29D37300A736AE /* ProfileTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				E2A57A8C2C280C2D005BBD40 /* EditTableViewController.swift in Sources */,
 				E2A57A952C29046D005BBD40 /* ContactsTableViewCell.swift in Sources */,
 				E26AE1022C1896E70095C9D0 /* FirebaseUserListener.swift in Sources */,
+				E22CA0ED2C29D37300A736AE /* ProfileTableViewController.swift in Sources */,
 				E2A57A972C290501005BBD40 /* ContactsTableViewController.swift in Sources */,
 				E2E9EBF02C11F019003E1B06 /* User.swift in Sources */,
 				E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */,

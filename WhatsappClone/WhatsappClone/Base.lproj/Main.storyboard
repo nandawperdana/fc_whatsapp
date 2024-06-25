@@ -129,22 +129,6 @@
             </objects>
             <point key="canvasLocation" x="109" y="-2"/>
         </scene>
-        <!--Chats-->
-        <scene sceneID="ADr-9a-F84">
-            <objects>
-                <viewController id="1ed-Py-szV" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CgW-gR-0Q8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="o3N-Pe-8MW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Chats" image="message" catalog="system" id="gfa-cF-k3P"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rag-dT-Ex3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1764" y="346"/>
-        </scene>
         <!--Settings-->
         <scene sceneID="fRX-JY-fgH">
             <objects>
@@ -362,7 +346,7 @@
                             <tableViewSection id="9ER-Op-AQc">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="5Cs-xQ-cvB">
-                                        <rect key="frame" x="0.0" y="197.66666793823242" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="197.66666793823245" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Cs-xQ-cvB" id="FxY-I6-6Lv">
                                             <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
@@ -412,7 +396,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="skf-Gc-T9Q" kind="relationship" relationship="viewControllers" id="gO9-mm-8h5"/>
-                        <segue destination="1ed-Py-szV" kind="relationship" relationship="viewControllers" id="fwA-6f-8qI"/>
+                        <segue destination="fdi-Ne-M89" kind="relationship" relationship="viewControllers" id="fwA-6f-8qI"/>
                         <segue destination="p08-6x-NIR" kind="relationship" relationship="viewControllers" id="83v-G5-23n"/>
                     </connections>
                 </tabBarController>
@@ -636,6 +620,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bgf-7U-Xae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3609.9236641221373" y="-313.38028169014086"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="LdL-BS-pHv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fdi-Ne-M89" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chats" image="message" catalog="system" id="gfa-cF-k3P"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Kx1-dV-qBG">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wac-nj-Lcm" kind="relationship" relationship="rootViewController" id="KME-jv-4ma"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JTl-wc-dMc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762.5954198473282" y="345.77464788732397"/>
+        </scene>
+        <!--Chats-->
+        <scene sceneID="wr2-HP-STL">
+            <objects>
+                <tableViewController id="wac-nj-Lcm" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="pT7-Q6-pWT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="qcz-VP-WWi">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qcz-VP-WWi" id="o7e-j5-cS5">
+                                    <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wac-nj-Lcm" id="Htv-ib-M63"/>
+                            <outlet property="delegate" destination="wac-nj-Lcm" id="dkS-8K-je1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Chats" id="cs4-qQ-fsB"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6l-Sv-wpP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2688" y="346"/>
         </scene>
     </scenes>
     <resources>

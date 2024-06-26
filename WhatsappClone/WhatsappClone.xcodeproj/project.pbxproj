@@ -14,6 +14,7 @@
 		E26AE1002C1895FA0095C9D0 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */; };
 		E26AE1022C1896E70095C9D0 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */; };
 		E27F276F2C2BB922007875F0 /* RecentChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F276E2C2BB922007875F0 /* RecentChatTableViewCell.swift */; };
+		E27F27712C2BBFD9007875F0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F27702C2BBFD9007875F0 /* Extension.swift */; };
 		E29F2A422C2A826E001C590F /* RecentChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2A412C2A826E001C590F /* RecentChat.swift */; };
 		E2A57A8C2C280C2D005BBD40 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A57A8B2C280C2D005BBD40 /* EditTableViewController.swift */; };
 		E2A57A8F2C283687005BBD40 /* FirebaseStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A57A8E2C283687005BBD40 /* FirebaseStorageHelper.swift */; };
@@ -40,6 +41,7 @@
 		E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
 		E27F276E2C2BB922007875F0 /* RecentChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatTableViewCell.swift; sourceTree = "<group>"; };
+		E27F27702C2BBFD9007875F0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		E29F2A412C2A826E001C590F /* RecentChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChat.swift; sourceTree = "<group>"; };
 		E2A57A8B2C280C2D005BBD40 /* EditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		E2A57A8E2C283687005BBD40 /* FirebaseStorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageHelper.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				E2A57A912C287124005BBD40 /* Util.swift */,
+				E27F27702C2BBFD9007875F0 /* Extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				E22CA0ED2C29D37300A736AE /* ProfileTableViewController.swift in Sources */,
 				E2A57A972C290501005BBD40 /* ContactsTableViewController.swift in Sources */,
 				E2E9EBF02C11F019003E1B06 /* User.swift in Sources */,
+				E27F27712C2BBFD9007875F0 /* Extension.swift in Sources */,
 				E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */,
 				E2A57A922C287124005BBD40 /* Util.swift in Sources */,
 				E2A57A8F2C283687005BBD40 /* FirebaseStorageHelper.swift in Sources */,

@@ -346,7 +346,7 @@
                             <tableViewSection id="9ER-Op-AQc">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="5Cs-xQ-cvB">
-                                        <rect key="frame" x="0.0" y="197.66666793823245" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="197.66666793823242" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Cs-xQ-cvB" id="FxY-I6-6Lv">
                                             <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
@@ -649,7 +649,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RecentChat" id="qcz-VP-WWi">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RecentChat" id="qcz-VP-WWi" customClass="RecentChatTableViewCell" customModule="WhatsappClone" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qcz-VP-WWi" id="o7e-j5-cS5">
@@ -730,6 +730,14 @@
                                         <constraint firstAttribute="trailing" secondItem="XPX-Jc-j2A" secondAttribute="trailing" constant="4" id="xlM-ax-QuJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="amQ-Zh-ahV" id="blD-aS-sDx"/>
+                                    <outlet property="dateLabel" destination="vNq-rr-LsI" id="T00-JS-Tqs"/>
+                                    <outlet property="recentMessageLabel" destination="fmb-RG-aIZ" id="zp0-xe-pGL"/>
+                                    <outlet property="unreadCounterLabel" destination="XMU-BL-8AK" id="pwE-46-MH4"/>
+                                    <outlet property="unreadCounterView" destination="XPX-Jc-j2A" id="jKT-5K-k2Z"/>
+                                    <outlet property="usernameLabel" destination="tqn-ZQ-UPl" id="5Ve-Hb-2Pz"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

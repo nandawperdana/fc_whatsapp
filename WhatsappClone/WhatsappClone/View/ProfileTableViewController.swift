@@ -35,6 +35,11 @@ class ProfileTableViewController: UITableViewController {
         // Navigate to chat screen
         if indexPath.section == 1 {
             print("Navigate to chat screen")
+            
+            guard let currentUser = User.currentUser else { return }
+            guard let user = user else { return }
+            
+            let chatRoomId = StartChatHelper.shared.startChat(user1: currentUser, user2: user)
         }
     }
     

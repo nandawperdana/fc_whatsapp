@@ -11,5 +11,6 @@ public let kCurrentUser = "key_current_user"
 public let kStorageReference = "gs://whatsappclone-b7c74.appspot.com"
 
 public let kChatRoomId = "chatRoomId"
+public let kSenderId = "senderId"
 
 public let kLimitDownload = 100

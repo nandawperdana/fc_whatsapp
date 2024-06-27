@@ -43,6 +43,7 @@ class StartChatHelper {
                 let recentChat = RecentChat(id: UUID().uuidString, chatRoomId: chatRoomId, senderId: senderUser.id, senderName: senderUser.username, receiverID: receiverUser.id, receiverName: receiverUser.username, date: Date(), lastMessage: "", unreadCounter: 0, avatar: receiverUser.avatar)
                 
                 // Store to firebase
+                FirebaseRecentChatListener.shared.saveRecentChat(recentChat)
             }
         }
     }

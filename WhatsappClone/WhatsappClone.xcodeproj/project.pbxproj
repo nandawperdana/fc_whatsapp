@@ -13,6 +13,7 @@
 		E242B5072C0E0B0100642697 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B5062C0E0B0100642697 /* LoginViewController.swift */; };
 		E251516D2C2CF6590038741C /* StartChatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251516C2C2CF6590038741C /* StartChatHelper.swift */; };
 		E251516F2C2D181B0038741C /* FirebaseRecentChatListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251516E2C2D181B0038741C /* FirebaseRecentChatListener.swift */; };
+		E25151752C2D229E0038741C /* RecentChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25151742C2D229E0038741C /* RecentChatTableViewController.swift */; };
 		E26AE1002C1895FA0095C9D0 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */; };
 		E26AE1022C1896E70095C9D0 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */; };
 		E27F276F2C2BB922007875F0 /* RecentChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F276E2C2BB922007875F0 /* RecentChatTableViewCell.swift */; };
@@ -42,6 +43,7 @@
 		E242B5062C0E0B0100642697 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E251516C2C2CF6590038741C /* StartChatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChatHelper.swift; sourceTree = "<group>"; };
 		E251516E2C2D181B0038741C /* FirebaseRecentChatListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRecentChatListener.swift; sourceTree = "<group>"; };
+		E25151742C2D229E0038741C /* RecentChatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatTableViewController.swift; sourceTree = "<group>"; };
 		E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
 		E27F276E2C2BB922007875F0 /* RecentChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				E27F276E2C2BB922007875F0 /* RecentChatTableViewCell.swift */,
+				E25151742C2D229E0038741C /* RecentChatTableViewController.swift */,
 			);
 			path = RecentChatsView;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				E27F27712C2BBFD9007875F0 /* Extension.swift in Sources */,
 				E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */,
 				E2A57A922C287124005BBD40 /* Util.swift in Sources */,
+				E25151752C2D229E0038741C /* RecentChatTableViewController.swift in Sources */,
 				E2A57A8F2C283687005BBD40 /* FirebaseStorageHelper.swift in Sources */,
 				E29F2A422C2A826E001C590F /* RecentChat.swift in Sources */,
 				E27F276F2C2BB922007875F0 /* RecentChatTableViewCell.swift in Sources */,

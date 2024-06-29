@@ -17,7 +17,6 @@ class StartChatHelper {
     func startChat(user1: User, user2: User) -> String {
         let chatRoomId = getChatRoomId(user1Id: user1.id, user2Id: user2.id)
         
-        print("Creating chat room \(chatRoomId)")
         // create recent items
         createRecentChatItems(chatRoomId: chatRoomId, users: [user1, user2])
         
@@ -49,8 +48,6 @@ class StartChatHelper {
             guard let currentUser = User.currentUser else { return }
             
             for id in memberIdsToCreateRecentChat {
-                
-                print("Creating recent chat for id \(id)")
                 
                 let senderUser = id == currentUser.id ? currentUser : self.getReceiverUser(users: users)
                 

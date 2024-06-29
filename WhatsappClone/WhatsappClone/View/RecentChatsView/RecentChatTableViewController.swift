@@ -72,7 +72,7 @@ class RecentChatTableViewController: UITableViewController {
         FirebaseRecentChatListener.shared.clearUnreadCounter(recentChat: recentChat)
         
         // Navigate to chat room
-        
+        navigateToChatRoom(recent: recentChat)
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -103,6 +103,14 @@ class RecentChatTableViewController: UITableViewController {
             return recentChat.receiverName.lowercased().contains(text.lowercased())
         })
         tableView.reloadData()
+    }
+    
+    private func navigateToChatRoom(recent: RecentChat) {
+        StartChatHelper.shared.restartChat(chatRoomId: recent.chatRoomId, memberIds: [recent.senderId, recent.receiverID])
+        
+        let chatVC = ChatViewController(chatId: recent.chatRoomId, recipientId: recent.receiverID, recipientName: recent.receiverName, recipientAvatar: recent.avatar)
+        
+        navigationController?.pushViewController(chatVC, animated: true)
     }
 }
 

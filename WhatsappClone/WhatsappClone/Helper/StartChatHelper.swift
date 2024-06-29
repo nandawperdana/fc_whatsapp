@@ -24,6 +24,14 @@ class StartChatHelper {
         return chatRoomId
     }
     
+    func restartChat(chatRoomId: String, memberIds: [String]) {
+        FirebaseUserListener.shared.downloadUsersFromFirestore(withIds: memberIds) { users in
+            if users.count > 0 {
+                StartChatHelper.shared.createRecentChatItems(chatRoomId: chatRoomId, users: users)
+            }
+        }
+    }
+    
     func createRecentChatItems(chatRoomId: String, users: [User]) {
         guard !users.isEmpty else { return }
         

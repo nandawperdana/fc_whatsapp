@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		119E5E16D06663A146D0A062 /* Pods_WhatsappClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E70839B9C060100193CD013 /* Pods_WhatsappClone.framework */; };
 		E217CF5F2C2724EC00E554AD /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E217CF5E2C2724EC00E554AD /* SettingsTableViewController.swift */; };
+		E21E5E952C305616004C2BE8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21E5E942C305616004C2BE8 /* ChatViewController.swift */; };
 		E22CA0ED2C29D37300A736AE /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22CA0EC2C29D37300A736AE /* ProfileTableViewController.swift */; };
 		E242B5072C0E0B0100642697 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B5062C0E0B0100642697 /* LoginViewController.swift */; };
 		E251516D2C2CF6590038741C /* StartChatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E251516C2C2CF6590038741C /* StartChatHelper.swift */; };
@@ -39,6 +40,7 @@
 		29693084F529DEC70CB70848 /* Pods-WhatsappClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappClone.debug.xcconfig"; path = "Target Support Files/Pods-WhatsappClone/Pods-WhatsappClone.debug.xcconfig"; sourceTree = "<group>"; };
 		5E70839B9C060100193CD013 /* Pods_WhatsappClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsappClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E217CF5E2C2724EC00E554AD /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		E21E5E942C305616004C2BE8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E22CA0EC2C29D37300A736AE /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		E242B5062C0E0B0100642697 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E251516C2C2CF6590038741C /* StartChatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartChatHelper.swift; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E21E5E932C3055F8004C2BE8 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				E21E5E942C305616004C2BE8 /* ChatViewController.swift */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
 		E27F276D2C2BB913007875F0 /* RecentChatsView */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 		E2A57A892C280B8D005BBD40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E21E5E932C3055F8004C2BE8 /* ChatView */,
 				E27F276D2C2BB913007875F0 /* RecentChatsView */,
 				E2A57A932C290443005BBD40 /* ContactsView */,
 				E2A57A8A2C280BCB005BBD40 /* SettingsView */,
@@ -322,6 +333,7 @@
 			files = (
 				E242B5072C0E0B0100642697 /* LoginViewController.swift in Sources */,
 				E2B0CF822C0B619A006CA5A5 /* ViewController.swift in Sources */,
+				E21E5E952C305616004C2BE8 /* ChatViewController.swift in Sources */,
 				E251516F2C2D181B0038741C /* FirebaseRecentChatListener.swift in Sources */,
 				E251516D2C2CF6590038741C /* StartChatHelper.swift in Sources */,
 				E2B0CF7E2C0B619A006CA5A5 /* AppDelegate.swift in Sources */,

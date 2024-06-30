@@ -7,6 +7,7 @@
 
 import UIKit
 import MessageKit
+import InputBarAccessoryView
 
 class ChatViewController: MessagesViewController {
     // MARK: Vars
@@ -14,6 +15,13 @@ class ChatViewController: MessagesViewController {
     private var recipientId = ""
     private var recipientName = ""
     private var recipientAvatar = ""
+    
+    private var refreshController: UIRefreshControl = UIRefreshControl()
+    
+    // MARK: Input Bar Vars
+    private var attachButton: InputBarButtonItem!
+    private var photoButton: InputBarButtonItem!
+    private var micButton: InputBarButtonItem!
     
     // MARK: Inits
     init(chatId: String = "", recipientId: String = "", recipientName: String = "", recipientAvatar: String = "") {
@@ -32,17 +40,62 @@ class ChatViewController: MessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Config
+        configureMessageCollectionView()
+        configureMessageInputBar()
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: Config UI
+    private func configureMessageCollectionView() {
+        messagesCollectionView.messagesDataSource = self
+        messagesCollectionView.messageCellDelegate = self
+        messagesCollectionView.messagesDisplayDelegate = self
+        messagesCollectionView.messagesLayoutDelegate = self
+        
+        scrollsToLastItemOnKeyboardBeginsEditing = true
+        maintainPositionOnKeyboardFrameChanged = true
+        
+        messagesCollectionView.refreshControl = refreshController
     }
-    */
+    
+    private func configureMessageInputBar() {
+        messageInputBar.delegate = self
+        messageInputBar.sendButton.title = ""
+        
+        // Init Buttons
+        attachButton = {
+            let button = InputBarButtonItem()
+            button.image = UIImage(named: "plus")
+            button.setSize(CGSize(width: 24, height: 24), animated: false)
+            return button
+        }()
+        
+        photoButton = {
+            let button = InputBarButtonItem()
+            button.image = UIImage(named: "camera")
+            button.setSize(CGSize(width: 24, height: 24), animated: false)
+            return button
+        }()
+        
+        micButton = {
+            let button = InputBarButtonItem()
+            button.image = UIImage(named: "mic")
+            button.setSize(CGSize(width: 24, height: 24), animated: false)
+            return button
+        }()
+        
+        // On Buttons Tap
+        attachButton.onTouchUpInside { item in
+            print("attach")
+        }
+        
+        photoButton.onTouchUpInside { item in
+            print("attach")
+        }
+        
+        micButton.onTouchUpInside { item in
+            print("attach")
+        }
+    }
 
 }

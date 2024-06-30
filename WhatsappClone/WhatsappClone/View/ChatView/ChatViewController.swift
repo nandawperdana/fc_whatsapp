@@ -23,6 +23,9 @@ class ChatViewController: MessagesViewController {
     private var photoButton: InputBarButtonItem!
     private var micButton: InputBarButtonItem!
     
+    let currentUser = MKSender(senderId: User.currentID, displayName: User.currentUser!.username)
+    var mkMessages: [MKMessage] = []
+    
     // MARK: Inits
     init(chatId: String = "", recipientId: String = "", recipientName: String = "", recipientAvatar: String = "") {
         super.init(nibName: nil, bundle: nil)

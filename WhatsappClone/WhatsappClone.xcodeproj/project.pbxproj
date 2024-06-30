@@ -34,11 +34,14 @@
 		E2BC5D022C14A4B900654538 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC5D012C14A4B900654538 /* Constants.swift */; };
 		E2E9EBF02C11F019003E1B06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E9EBEF2C11F018003E1B06 /* User.swift */; };
 		E2E9EBF72C11F461003E1B06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */; };
-		E2F63A122C31A47A009D351A /* MessageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A112C31A47A009D351A /* MessageDataSource.swift */; };
+		E2F63A122C31A47A009D351A /* MessagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A112C31A47A009D351A /* MessagesDataSource.swift */; };
 		E2F63A142C31A4F9009D351A /* MessageCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A132C31A4F9009D351A /* MessageCellDelegate.swift */; };
 		E2F63A162C31A52A009D351A /* MessagesDisplayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A152C31A52A009D351A /* MessagesDisplayDelegate.swift */; };
 		E2F63A182C31A574009D351A /* MessagesLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A172C31A574009D351A /* MessagesLayoutDelegate.swift */; };
 		E2F63A1A2C31A5C4009D351A /* InputBarAccessoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A192C31A5C4009D351A /* InputBarAccessoryViewDelegate.swift */; };
+		E2F63A1C2C31A984009D351A /* MKSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A1B2C31A984009D351A /* MKSender.swift */; };
+		E2F63A1E2C31AA4C009D351A /* MKMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A1D2C31AA4C009D351A /* MKMessage.swift */; };
+		E2F63A212C31AD40009D351A /* LocalMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A202C31AD40009D351A /* LocalMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,11 +75,14 @@
 		E2BC5D012C14A4B900654538 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E2E9EBEF2C11F018003E1B06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E2F63A112C31A47A009D351A /* MessageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDataSource.swift; sourceTree = "<group>"; };
+		E2F63A112C31A47A009D351A /* MessagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDataSource.swift; sourceTree = "<group>"; };
 		E2F63A132C31A4F9009D351A /* MessageCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellDelegate.swift; sourceTree = "<group>"; };
 		E2F63A152C31A52A009D351A /* MessagesDisplayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDisplayDelegate.swift; sourceTree = "<group>"; };
 		E2F63A172C31A574009D351A /* MessagesLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesLayoutDelegate.swift; sourceTree = "<group>"; };
 		E2F63A192C31A5C4009D351A /* InputBarAccessoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBarAccessoryViewDelegate.swift; sourceTree = "<group>"; };
+		E2F63A1B2C31A984009D351A /* MKSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKSender.swift; sourceTree = "<group>"; };
+		E2F63A1D2C31AA4C009D351A /* MKMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMessage.swift; sourceTree = "<group>"; };
+		E2F63A202C31AD40009D351A /* LocalMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMessage.swift; sourceTree = "<group>"; };
 		E74BB904DB28E19EF07052BE /* Pods-WhatsappClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappClone.release.xcconfig"; path = "Target Support Files/Pods-WhatsappClone/Pods-WhatsappClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,8 +226,11 @@
 		E2E9EBEE2C11F005003E1B06 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E2F63A1F2C31AD32009D351A /* DBModel */,
 				E2E9EBEF2C11F018003E1B06 /* User.swift */,
 				E29F2A412C2A826E001C590F /* RecentChat.swift */,
+				E2F63A1B2C31A984009D351A /* MKSender.swift */,
+				E2F63A1D2C31AA4C009D351A /* MKMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,13 +238,21 @@
 		E2F63A102C31A450009D351A /* ChatViewExtension */ = {
 			isa = PBXGroup;
 			children = (
-				E2F63A112C31A47A009D351A /* MessageDataSource.swift */,
+				E2F63A112C31A47A009D351A /* MessagesDataSource.swift */,
 				E2F63A132C31A4F9009D351A /* MessageCellDelegate.swift */,
 				E2F63A152C31A52A009D351A /* MessagesDisplayDelegate.swift */,
 				E2F63A172C31A574009D351A /* MessagesLayoutDelegate.swift */,
 				E2F63A192C31A5C4009D351A /* InputBarAccessoryViewDelegate.swift */,
 			);
 			path = ChatViewExtension;
+			sourceTree = "<group>";
+		};
+		E2F63A1F2C31AD32009D351A /* DBModel */ = {
+			isa = PBXGroup;
+			children = (
+				E2F63A202C31AD40009D351A /* LocalMessage.swift */,
+			);
+			path = DBModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +378,7 @@
 				E251516F2C2D181B0038741C /* FirebaseRecentChatListener.swift in Sources */,
 				E251516D2C2CF6590038741C /* StartChatHelper.swift in Sources */,
 				E2B0CF7E2C0B619A006CA5A5 /* AppDelegate.swift in Sources */,
+				E2F63A1E2C31AA4C009D351A /* MKMessage.swift in Sources */,
 				E2F63A182C31A574009D351A /* MessagesLayoutDelegate.swift in Sources */,
 				E2A57A8C2C280C2D005BBD40 /* EditTableViewController.swift in Sources */,
 				E2A57A952C29046D005BBD40 /* ContactsTableViewCell.swift in Sources */,
@@ -368,11 +386,13 @@
 				E22CA0ED2C29D37300A736AE /* ProfileTableViewController.swift in Sources */,
 				E2A57A972C290501005BBD40 /* ContactsTableViewController.swift in Sources */,
 				E2E9EBF02C11F019003E1B06 /* User.swift in Sources */,
+				E2F63A1C2C31A984009D351A /* MKSender.swift in Sources */,
 				E2F63A142C31A4F9009D351A /* MessageCellDelegate.swift in Sources */,
 				E27F27712C2BBFD9007875F0 /* Extension.swift in Sources */,
 				E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */,
+				E2F63A212C31AD40009D351A /* LocalMessage.swift in Sources */,
 				E2A57A922C287124005BBD40 /* Util.swift in Sources */,
-				E2F63A122C31A47A009D351A /* MessageDataSource.swift in Sources */,
+				E2F63A122C31A47A009D351A /* MessagesDataSource.swift in Sources */,
 				E25151752C2D229E0038741C /* RecentChatTableViewController.swift in Sources */,
 				E2A57A8F2C283687005BBD40 /* FirebaseStorageHelper.swift in Sources */,
 				E29F2A422C2A826E001C590F /* RecentChat.swift in Sources */,

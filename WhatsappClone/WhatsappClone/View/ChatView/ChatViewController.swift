@@ -63,26 +63,37 @@ class ChatViewController: MessagesViewController {
     
     private func configureMessageInputBar() {
         messageInputBar.delegate = self
-        messageInputBar.sendButton.title = ""
+//        messageInputBar.sendButton.title = ""
+        
+        // Text View
+        messageInputBar.inputTextView.isImagePasteEnabled = false
+        messageInputBar.inputTextView.backgroundColor = UIColor.white
+        messageInputBar.inputTextView.textColor = UIColor.black
+        messageInputBar.inputTextView.layer.cornerRadius = 18
+        messageInputBar.inputTextView.layer.borderWidth = 0.5
+        messageInputBar.inputTextView.layer.borderColor = UIColor.lightGray.cgColor
         
         // Init Buttons
         attachButton = {
             let button = InputBarButtonItem()
-            button.image = UIImage(named: "plus")
+            button.image = UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 30))
+            button.tintColor = UIColor.systemBlue
             button.setSize(CGSize(width: 24, height: 24), animated: false)
             return button
         }()
         
         photoButton = {
             let button = InputBarButtonItem()
-            button.image = UIImage(named: "camera")
+            button.image = UIImage(systemName: "camera")
+            button.tintColor = UIColor.systemBlue
             button.setSize(CGSize(width: 24, height: 24), animated: false)
             return button
         }()
         
         micButton = {
             let button = InputBarButtonItem()
-            button.image = UIImage(named: "mic")
+            button.image = UIImage(systemName: "mic")
+            button.tintColor = UIColor.systemBlue
             button.setSize(CGSize(width: 24, height: 24), animated: false)
             return button
         }()
@@ -99,6 +110,11 @@ class ChatViewController: MessagesViewController {
         micButton.onTouchUpInside { item in
             print("attach")
         }
+        
+        // Set button
+        messageInputBar.setStackViewItems([attachButton], forStack: .left, animated: false)
+        messageInputBar.setLeftStackViewWidthConstant(to: 24, animated: false)
+//        messageInputBar.setStackViewItems([photoButton, micButton], forStack: .right, animated: false)
     }
 
 }

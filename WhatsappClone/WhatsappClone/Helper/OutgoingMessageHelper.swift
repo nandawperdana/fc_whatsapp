@@ -29,12 +29,11 @@ class OutgoingMessageHelper {
     
     class func sendMessage(message: LocalMessage, memberIds: [String]) {
         // Save message to realm
-        print("send message \(message)")
         DBManager.shared.saveToRealm(message)
         
         // Send message/save to firebase
         for id in memberIds {
-            print("save message to member \(id)")
+            FirebaseMessageListener.shared.saveMessage(message, memberId: id)
         }
     }
 }

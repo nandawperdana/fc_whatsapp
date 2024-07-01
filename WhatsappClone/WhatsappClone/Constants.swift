@@ -12,6 +12,7 @@ public let kStorageReference = "gs://whatsappclone-b7c74.appspot.com"
 
 public let kChatRoomId = "chatRoomId"
 public let kSenderId = "senderId"
+public let kDate = "date"
 
 public let kSent = "sent"
 public let kRead = "read"

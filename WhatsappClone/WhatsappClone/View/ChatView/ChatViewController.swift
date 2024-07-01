@@ -8,6 +8,7 @@
 import UIKit
 import MessageKit
 import InputBarAccessoryView
+import RealmSwift
 
 class ChatViewController: MessagesViewController {
     // MARK: Vars
@@ -23,8 +24,11 @@ class ChatViewController: MessagesViewController {
     private var photoButton: InputBarButtonItem!
     private var micButton: InputBarButtonItem!
     
+    let realm = try! Realm()
+    
     let currentUser = MKSender(senderId: User.currentID, displayName: User.currentUser!.username)
     var mkMessages: [MKMessage] = []
+    var allLocalMessages: Results<LocalMessage>!
     
     // MARK: Inits
     init(chatId: String = "", recipientId: String = "", recipientName: String = "", recipientAvatar: String = "") {
@@ -38,16 +42,19 @@ class ChatViewController: MessagesViewController {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-
+    
     // MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Config
         configureMessageCollectionView()
         configureMessageInputBar()
+        
+        // Load Chat
+        loadChats()
     }
-
+    
     // MARK: Config UI
     private func configureMessageCollectionView() {
         messagesCollectionView.messagesDataSource = self
@@ -63,7 +70,7 @@ class ChatViewController: MessagesViewController {
     
     private func configureMessageInputBar() {
         messageInputBar.delegate = self
-//        messageInputBar.sendButton.title = ""
+        //        messageInputBar.sendButton.title = ""
         
         // Text View
         messageInputBar.inputTextView.isImagePasteEnabled = false
@@ -114,11 +121,20 @@ class ChatViewController: MessagesViewController {
         // Set button
         messageInputBar.setStackViewItems([attachButton], forStack: .left, animated: false)
         messageInputBar.setLeftStackViewWidthConstant(to: 24, animated: false)
-//        messageInputBar.setStackViewItems([photoButton, micButton], forStack: .right, animated: false)
+        //        messageInputBar.setStackViewItems([photoButton, micButton], forStack: .right, animated: false)
     }
-
+    
     // MARK: Actions
     func sendMessage(text: String?, photo: UIImage?, video: String?, audio: String?, audioDuration: Float = 0.0) {
         OutgoingMessageHelper.send(chatId: chatId, text: text, photo: photo, video: video, audio: audio, memberIds: [User.currentID, recipientId])
+    }
+    
+    // MARK: Load Chats
+    private func loadChats() {
+        let predicate = NSPredicate(format: "\(kChatRoomId) = %@", chatId)
+        
+        allLocalMessages = realm.objects(LocalMessage.self).filter(predicate).sorted(byKeyPath: kDate, ascending: true)
+        
+        print("got \(allLocalMessages.count) messages")
     }
 }

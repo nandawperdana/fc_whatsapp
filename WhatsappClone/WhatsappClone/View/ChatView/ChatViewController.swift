@@ -30,6 +30,9 @@ class ChatViewController: MessagesViewController {
     var mkMessages: [MKMessage] = []
     var allLocalMessages: Results<LocalMessage>!
     
+    // MARK: Listener
+    var notificationToken: NotificationToken?
+    
     // MARK: Inits
     init(chatId: String = "", recipientId: String = "", recipientName: String = "", recipientAvatar: String = "") {
         super.init(nibName: nil, bundle: nil)
@@ -135,6 +138,34 @@ class ChatViewController: MessagesViewController {
         
         allLocalMessages = realm.objects(LocalMessage.self).filter(predicate).sorted(byKeyPath: kDate, ascending: true)
         
-        print("got \(allLocalMessages.count) messages")
+        notificationToken = allLocalMessages.observe({ (changes: RealmCollectionChange) in
+            switch changes {
+            case .initial:
+                self.createMessages()
+                self.messagesCollectionView.reloadData()
+                self.messagesCollectionView.scrollToLastItem(animated: true)
+            case .update(_, _, let insertion, _):
+                for idx in insertion {
+                    self.createMessage(self.allLocalMessages[idx])
+                    self.messagesCollectionView.reloadData()
+                    self.messagesCollectionView.scrollToLastItem(animated: false)
+                }
+            case .error(let error):
+                print("error when listening messsage ", error.localizedDescription)
+            }
+        })
+    }
+    
+    private func createMessages() {
+        for message in allLocalMessages {
+            createMessage(message)
+        }
+    }
+    
+    private func createMessage(_ message: LocalMessage) {
+        let helper = IncomingMessageHelper(messageVC: self)
+        if let newMessage = helper.createMessage(localMessage: message) {
+            mkMessages.append(newMessage)
+        }
     }
 }

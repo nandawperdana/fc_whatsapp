@@ -12,6 +12,8 @@
 		E21E5E952C305616004C2BE8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21E5E942C305616004C2BE8 /* ChatViewController.swift */; };
 		E22CA0ED2C29D37300A736AE /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22CA0EC2C29D37300A736AE /* ProfileTableViewController.swift */; };
 		E233E0AA2C343DBF0002B4D9 /* IncomingMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233E0A92C343DBF0002B4D9 /* IncomingMessageHelper.swift */; };
+		E233E0B22C3457020002B4D9 /* CustomTextChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E233E0B02C3457020002B4D9 /* CustomTextChatView.swift */; };
+		E233E0B32C3457020002B4D9 /* CustomTextChatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E233E0B12C3457020002B4D9 /* CustomTextChatView.xib */; };
 		E242B5072C0E0B0100642697 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242B5062C0E0B0100642697 /* LoginViewController.swift */; };
 		E24FE7782C32EE3600F58417 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FE7772C32EE3600F58417 /* DBManager.swift */; };
 		E24FE77A2C32F2DD00F58417 /* OutgoingMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24FE7792C32F2DD00F58417 /* OutgoingMessageHelper.swift */; };
@@ -55,6 +57,8 @@
 		E21E5E942C305616004C2BE8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E22CA0EC2C29D37300A736AE /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		E233E0A92C343DBF0002B4D9 /* IncomingMessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingMessageHelper.swift; sourceTree = "<group>"; };
+		E233E0B02C3457020002B4D9 /* CustomTextChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextChatView.swift; sourceTree = "<group>"; };
+		E233E0B12C3457020002B4D9 /* CustomTextChatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextChatView.xib; sourceTree = "<group>"; };
 		E242B5062C0E0B0100642697 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E24FE7772C32EE3600F58417 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		E24FE7792C32F2DD00F58417 /* OutgoingMessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingMessageHelper.swift; sourceTree = "<group>"; };
@@ -126,10 +130,20 @@
 		E21E5E932C3055F8004C2BE8 /* ChatView */ = {
 			isa = PBXGroup;
 			children = (
+				E233E0AF2C3456D30002B4D9 /* CustomView */,
 				E2F63A102C31A450009D351A /* ChatViewExtension */,
 				E21E5E942C305616004C2BE8 /* ChatViewController.swift */,
 			);
 			path = ChatView;
+			sourceTree = "<group>";
+		};
+		E233E0AF2C3456D30002B4D9 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				E233E0B02C3457020002B4D9 /* CustomTextChatView.swift */,
+				E233E0B12C3457020002B4D9 /* CustomTextChatView.xib */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		E27F276D2C2BB913007875F0 /* RecentChatsView */ = {
@@ -328,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2B0CF872C0B619C006CA5A5 /* Assets.xcassets in Resources */,
+				E233E0B32C3457020002B4D9 /* CustomTextChatView.xib in Resources */,
 				E2B0CF8A2C0B619C006CA5A5 /* Base in Resources */,
 				E2B0CF852C0B619A006CA5A5 /* Base in Resources */,
 				E2E9EBF72C11F461003E1B06 /* GoogleService-Info.plist in Resources */,
@@ -407,6 +422,7 @@
 				E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */,
 				E2F63A212C31AD40009D351A /* LocalMessage.swift in Sources */,
 				E2A57A922C287124005BBD40 /* Util.swift in Sources */,
+				E233E0B22C3457020002B4D9 /* CustomTextChatView.swift in Sources */,
 				E2F63A122C31A47A009D351A /* MessagesDataSource.swift in Sources */,
 				E233E0AA2C343DBF0002B4D9 /* IncomingMessageHelper.swift in Sources */,
 				E25151752C2D229E0038741C /* RecentChatTableViewController.swift in Sources */,

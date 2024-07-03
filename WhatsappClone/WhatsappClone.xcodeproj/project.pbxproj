@@ -23,6 +23,8 @@
 		E26AE1022C1896E70095C9D0 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */; };
 		E27F276F2C2BB922007875F0 /* RecentChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F276E2C2BB922007875F0 /* RecentChatTableViewCell.swift */; };
 		E27F27712C2BBFD9007875F0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F27702C2BBFD9007875F0 /* Extension.swift */; };
+		E28FBB512C35908100454DD7 /* CustomTextChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28FBB502C35908100454DD7 /* CustomTextChatView.swift */; };
+		E28FBB532C3590D100454DD7 /* CustomTextChatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E28FBB522C3590D100454DD7 /* CustomTextChatView.xib */; };
 		E29F2A422C2A826E001C590F /* RecentChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29F2A412C2A826E001C590F /* RecentChat.swift */; };
 		E2A57A8C2C280C2D005BBD40 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A57A8B2C280C2D005BBD40 /* EditTableViewController.swift */; };
 		E2A57A8F2C283687005BBD40 /* FirebaseStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A57A8E2C283687005BBD40 /* FirebaseStorageHelper.swift */; };
@@ -66,6 +68,8 @@
 		E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
 		E27F276E2C2BB922007875F0 /* RecentChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatTableViewCell.swift; sourceTree = "<group>"; };
 		E27F27702C2BBFD9007875F0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		E28FBB502C35908100454DD7 /* CustomTextChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextChatView.swift; sourceTree = "<group>"; };
+		E28FBB522C3590D100454DD7 /* CustomTextChatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTextChatView.xib; sourceTree = "<group>"; };
 		E29F2A412C2A826E001C590F /* RecentChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChat.swift; sourceTree = "<group>"; };
 		E2A57A8B2C280C2D005BBD40 /* EditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		E2A57A8E2C283687005BBD40 /* FirebaseStorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageHelper.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		E21E5E932C3055F8004C2BE8 /* ChatView */ = {
 			isa = PBXGroup;
 			children = (
+				E28FBB4F2C35906400454DD7 /* CustomCell */,
 				E2F63A102C31A450009D351A /* ChatViewExtension */,
 				E21E5E942C305616004C2BE8 /* ChatViewController.swift */,
 			);
@@ -139,6 +144,15 @@
 				E25151742C2D229E0038741C /* RecentChatTableViewController.swift */,
 			);
 			path = RecentChatsView;
+			sourceTree = "<group>";
+		};
+		E28FBB4F2C35906400454DD7 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				E28FBB522C3590D100454DD7 /* CustomTextChatView.xib */,
+				E28FBB502C35908100454DD7 /* CustomTextChatView.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 		E2A57A892C280B8D005BBD40 /* View */ = {
@@ -328,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2B0CF872C0B619C006CA5A5 /* Assets.xcassets in Resources */,
+				E28FBB532C3590D100454DD7 /* CustomTextChatView.xib in Resources */,
 				E2B0CF8A2C0B619C006CA5A5 /* Base in Resources */,
 				E2B0CF852C0B619A006CA5A5 /* Base in Resources */,
 				E2E9EBF72C11F461003E1B06 /* GoogleService-Info.plist in Resources */,
@@ -417,6 +432,7 @@
 				E26AE1002C1895FA0095C9D0 /* FCollectionReference.swift in Sources */,
 				E2BC5D022C14A4B900654538 /* Constants.swift in Sources */,
 				E217CF5F2C2724EC00E554AD /* SettingsTableViewController.swift in Sources */,
+				E28FBB512C35908100454DD7 /* CustomTextChatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

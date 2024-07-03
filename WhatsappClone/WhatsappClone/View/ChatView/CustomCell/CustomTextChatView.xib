@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTextChatView" customModule="WhatsappClone" customModuleProvider="target">
+            <connections>
+                <outlet property="bubbleView" destination="kBz-cJ-v0J" id="7af-YN-3ND"/>
+                <outlet property="infoLabel" destination="llA-3D-n2M" id="NGf-9m-M18"/>
+                <outlet property="leftBubbleView" destination="DHn-ta-7Ob" id="5bo-YW-k1B"/>
+                <outlet property="messageLabel" destination="idu-DS-Xl4" id="IzA-Ap-KdR"/>
+                <outlet property="rightBubbleView" destination="6CI-Z7-93I" id="oOu-5u-1sK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="545" height="115"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHn-ta-7Ob" userLabel="LeftBubble">
+                    <rect key="frame" x="20" y="99" width="16" height="16"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="QCJ-Iy-WO4"/>
+                        <constraint firstAttribute="height" constant="16" id="eNc-Dh-uEB"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6CI-Z7-93I" userLabel="RightBubble">
+                    <rect key="frame" x="509" y="99" width="16" height="16"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="Bgk-r9-a0B"/>
+                        <constraint firstAttribute="height" constant="16" id="NoD-4U-YeI"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBz-cJ-v0J">
+                    <rect key="frame" x="20" y="0.0" width="505" height="115"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idu-DS-Xl4">
+                            <rect key="frame" x="12" y="12" width="481" height="71"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="InfoLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llA-3D-n2M">
+                            <rect key="frame" x="12" y="91" width="481" height="12"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="llA-3D-n2M" firstAttribute="top" secondItem="idu-DS-Xl4" secondAttribute="bottom" constant="8" id="54v-uC-qtb"/>
+                        <constraint firstItem="llA-3D-n2M" firstAttribute="leading" secondItem="kBz-cJ-v0J" secondAttribute="leadingMargin" id="DCb-mx-MVU"/>
+                        <constraint firstAttribute="bottomMargin" secondItem="llA-3D-n2M" secondAttribute="bottom" id="Oll-kC-faJ"/>
+                        <constraint firstItem="idu-DS-Xl4" firstAttribute="top" secondItem="kBz-cJ-v0J" secondAttribute="topMargin" id="VcO-Ow-rIL"/>
+                        <constraint firstAttribute="trailingMargin" secondItem="idu-DS-Xl4" secondAttribute="trailing" id="fZg-Sk-3WC"/>
+                        <constraint firstItem="idu-DS-Xl4" firstAttribute="leading" secondItem="kBz-cJ-v0J" secondAttribute="leadingMargin" id="jma-Lq-jmk"/>
+                        <constraint firstAttribute="trailingMargin" secondItem="llA-3D-n2M" secondAttribute="trailing" id="ngd-dh-rjj"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="6CI-Z7-93I" firstAttribute="trailing" secondItem="kBz-cJ-v0J" secondAttribute="trailing" id="4XO-VK-biK"/>
+                <constraint firstAttribute="trailingMargin" secondItem="kBz-cJ-v0J" secondAttribute="trailing" id="FjK-og-fdd"/>
+                <constraint firstItem="6CI-Z7-93I" firstAttribute="bottom" secondItem="kBz-cJ-v0J" secondAttribute="bottom" id="HcV-aN-6Xy"/>
+                <constraint firstItem="kBz-cJ-v0J" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="Nna-7Y-s22"/>
+                <constraint firstItem="DHn-ta-7Ob" firstAttribute="bottom" secondItem="kBz-cJ-v0J" secondAttribute="bottom" id="cnj-6z-JWn"/>
+                <constraint firstItem="kBz-cJ-v0J" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="hLi-OZ-nod"/>
+                <constraint firstAttribute="bottom" secondItem="kBz-cJ-v0J" secondAttribute="bottom" id="sDg-mD-R7S"/>
+                <constraint firstItem="DHn-ta-7Ob" firstAttribute="leading" secondItem="kBz-cJ-v0J" secondAttribute="leading" id="u2M-cv-cSA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+            <point key="canvasLocation" x="496.94656488549617" y="79.929577464788736"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

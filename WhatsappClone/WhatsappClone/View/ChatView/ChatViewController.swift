@@ -53,7 +53,6 @@ class ChatViewController: MessagesViewController {
         // Config
         configureMessageCollectionView()
         configureMessageInputBar()
-        configureCustomCells()
         
         // Load Chat
         loadChats()
@@ -126,17 +125,6 @@ class ChatViewController: MessagesViewController {
         messageInputBar.setStackViewItems([attachButton], forStack: .left, animated: false)
         messageInputBar.setLeftStackViewWidthConstant(to: 24, animated: false)
         //        messageInputBar.setStackViewItems([photoButton, micButton], forStack: .right, animated: false)
-    }
-    
-    private func configureCustomCells() {
-        // Register custom cells
-        messagesCollectionView.register(CustomTextChatView.self)
-        
-        // Set sizing calculator
-        let textCalc = messagesCollectionView.messagesCollectionViewFlowLayout.textMessageSizeCalculator
-        textCalc.messageLabelFont = CustomTextChatView.chatViewFont
-        textCalc.incomingMessageLabelInsets = CustomTextChatView.chatViewInset
-        textCalc.outgoingMessageLabelInsets = CustomTextChatView.chatViewInset
     }
     
     // MARK: Actions

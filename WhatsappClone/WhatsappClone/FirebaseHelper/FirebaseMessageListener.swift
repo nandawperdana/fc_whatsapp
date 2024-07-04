@@ -21,4 +21,24 @@ class FirebaseMessageListener {
             print("Error when saving message to Firebase ", error.localizedDescription)
         }
     }
+    
+    // MARK: Fetch Old Message
+    func fetchOldMessage(_ documentId: String, collectionId: String) {
+        FirebaseReference(.Message).document(documentId).collection(collectionId).getDocuments { snapashot, error in
+            guard let documents = snapashot?.documents else {
+                print("No documents found")
+                return
+            }
+            
+            var messages = documents.compactMap { snapshot -> LocalMessage? in
+                return try? snapshot.data(as: LocalMessage.self)
+            }
+            
+            messages.sort(by:  { $0.date < $1.date })
+            
+            for message in messages {
+                DBManager.shared.saveToRealm(message)
+            }
+        }
+    }
 }

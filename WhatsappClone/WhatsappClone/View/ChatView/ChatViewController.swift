@@ -36,6 +36,11 @@ class ChatViewController: MessagesViewController {
     var mkMessages: [MKMessage] = []
     var allLocalMessages: Results<LocalMessage>!
     
+    // MARK: Paging
+    var maxMessageNumber = 0
+    var minMessageNumber = 0
+    var displayMessageCount = 0
+    
     // MARK: Listener
     var notificationToken: NotificationToken?
     
@@ -301,9 +306,30 @@ class ChatViewController: MessagesViewController {
         FirebaseMessageListener.shared.fetchOldMessage(User.currentID, collectionId: chatId)
     }
     
+    private func fetchMoreMessage(maxNumber: Int, minNumber: Int) {
+        maxMessageNumber = minNumber - 1
+        minMessageNumber = maxMessageNumber - kLimitMessageFetch
+        
+        if minMessageNumber < 0 {
+            minMessageNumber = 0
+        }
+        
+        for i in (minMessageNumber ... maxMessageNumber).reversed() {
+            // create message
+            createOlderMessage(allLocalMessages[i])
+        }
+    }
+    
     private func createMessages() {
-        for message in allLocalMessages {
-            createMessage(message)
+        maxMessageNumber = allLocalMessages.count - displayMessageCount
+        minMessageNumber = maxMessageNumber - kLimitMessageFetch
+        
+        if minMessageNumber < 0 {
+            minMessageNumber = 0
+        }
+        
+        for i in minMessageNumber ..< maxMessageNumber {
+            createMessage(allLocalMessages[i])
         }
     }
     
@@ -311,6 +337,15 @@ class ChatViewController: MessagesViewController {
         let helper = IncomingMessageHelper(messageVC: self)
         if let newMessage = helper.createMessage(localMessage: message) {
             mkMessages.append(newMessage)
+            displayMessageCount += 1
+        }
+    }
+    
+    private func createOlderMessage(_ message: LocalMessage) {
+        let helper = IncomingMessageHelper(messageVC: self)
+        if let newMessage = helper.createMessage(localMessage: message) {
+            self.mkMessages.insert(newMessage, at: 0)
+            displayMessageCount += 1
         }
     }
     
@@ -326,5 +361,18 @@ class ChatViewController: MessagesViewController {
     private func lastMessageDate() -> Date {
         let lastMessageDate = allLocalMessages.last?.date ?? Date()
         return Calendar.current.date(byAdding: .second, value: 1, to: lastMessageDate) ?? lastMessageDate
+    }
+    
+    // MARK: UIScrollViewDelegate
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if refreshController.isRefreshing {
+            if displayMessageCount < allLocalMessages.count {
+                // Fetch more data
+                fetchMoreMessage(maxNumber: maxMessageNumber, minNumber: minMessageNumber)
+                messagesCollectionView.reloadDataAndKeepOffset()
+            }
+            
+            refreshController.endRefreshing()
+        }
     }
 }

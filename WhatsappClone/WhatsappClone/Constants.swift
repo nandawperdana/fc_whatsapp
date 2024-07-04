@@ -23,3 +23,4 @@ public let kVideo = "video"
 public let kAudio = "audio"
 
 public let kLimitDownload = 100
+public let kLimitMessageFetch = 6

@@ -107,6 +107,34 @@ class FirebaseUserListener {
     }
     
     // MARK: - Download
+    func getUser(by userId: String, completion: @escaping (_ user: User?) -> Void) {
+        FirebaseReference(.User).document(userId).getDocument { snapshot, error in
+            
+            guard let document = snapshot else {
+                print("No document found")
+                return
+            }
+            
+            // Download data
+            let result = Result {
+                try? document.data(as: User.self)
+            }
+            
+            switch result {
+            case .success(let userObj):
+                if let user = userObj {
+                    completion(user)
+                } else {
+                    print("No User found")
+                    completion(nil)
+                }
+            case .failure(let error):
+                completion(nil)
+                print("Error encoding User data, ", error.localizedDescription)
+            }
+        }
+    }
+    
     func downloadUserFromFirestore(userId: String, email: String? = nil) {
         // Call firebase function to download user data
         FirebaseReference(.User).document(userId).getDocument { snapshot, error in

@@ -11,7 +11,37 @@ import Firebase
 class FirebaseMessageListener {
     static let shared = FirebaseMessageListener()
     
+    var newChatListener: ListenerRegistration!
+    
     private init() { }
+    
+    // MARK: Chat Listener
+    func listenForNewChat(_ documentId: String, collectionId: String, lastMessageDate: Date) {
+        newChatListener = FirebaseReference(.Message).document(documentId).collection(collectionId).whereField(kDate, isGreaterThan: lastMessageDate).addSnapshotListener({ snapshot, error in
+            guard let snapshot = snapshot else { return }
+            
+            for change in snapshot.documentChanges {
+                if change.type == .added {
+                    let result = Result {
+                        try? change.document.data(as: LocalMessage.self)
+                    }
+                    
+                    switch result {
+                    case .success(let message):
+                        if let message = message {
+                            if message.senderId != User.currentID {
+                                DBManager.shared.saveToRealm(message)
+                            }
+                        } else {
+                            print("Message doesn't exist")
+                        }
+                    case .failure(let error):
+                        print("Error decoding message: \(error.localizedDescription)")
+                    }
+                }
+            }
+        })
+    }
     
     // MARK: Save, Update, Delete Message
     func saveMessage(_ message: LocalMessage, memberId: String) {

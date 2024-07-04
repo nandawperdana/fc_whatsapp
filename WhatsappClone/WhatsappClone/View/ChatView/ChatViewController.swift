@@ -188,7 +188,7 @@ class ChatViewController: MessagesViewController {
         }()
         
         avatarView = {
-            let view = UIImageView(image: UIImage(named: "person.circle.fill"))
+            let view = UIImageView(image: UIImage(named: "person.circle.fill")?.circleMasked)
             view.contentMode = .scaleToFill
             view.translatesAutoresizingMaskIntoConstraints = false
             return view
@@ -225,7 +225,7 @@ class ChatViewController: MessagesViewController {
         subTitleLabel.text = "Tap here for contact info"
         if !recipientAvatar.isEmpty {
             FirebaseStorageHelper.downloadImage(url: recipientAvatar) { image in
-                self.avatarView.image = image
+                self.avatarView.image = image?.circleMasked
             }
         }
         

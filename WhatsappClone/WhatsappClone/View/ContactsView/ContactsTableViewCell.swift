@@ -23,7 +23,6 @@ class ContactsTableViewCell: UITableViewCell {
     }
 
     func configure(user: User) {
-        avatarImageView.layer.cornerRadius = avatarImageView.frame.width / 2
         usernameLabel.text = user.username
         statusLabel.text = user.status
         setAvatar(avatar: user.avatar)
@@ -33,7 +32,7 @@ class ContactsTableViewCell: UITableViewCell {
         guard avatar != "" else { return }
         
         FirebaseStorageHelper.downloadImage(url: avatar) { image in
-            self.avatarImageView.image = image
+            self.avatarImageView.image = image?.circleMasked
         }
     }
 }

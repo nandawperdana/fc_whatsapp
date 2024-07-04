@@ -85,7 +85,6 @@ class ChatViewController: MessagesViewController {
     
     private func configureMessageInputBar() {
         messageInputBar.delegate = self
-        //        messageInputBar.sendButton.title = ""
         
         // Text View
         messageInputBar.inputTextView.isImagePasteEnabled = false
@@ -108,7 +107,7 @@ class ChatViewController: MessagesViewController {
             let button = InputBarButtonItem()
             button.image = UIImage(systemName: "camera")
             button.tintColor = UIColor.systemBlue
-            button.setSize(CGSize(width: 24, height: 24), animated: false)
+            button.setSize(CGSize(width: 32, height: 32), animated: false)
             return button
         }()
         
@@ -116,7 +115,7 @@ class ChatViewController: MessagesViewController {
             let button = InputBarButtonItem()
             button.image = UIImage(systemName: "mic")
             button.tintColor = UIColor.systemBlue
-            button.setSize(CGSize(width: 24, height: 24), animated: false)
+            button.setSize(CGSize(width: 32, height: 32), animated: false)
             return button
         }()
         
@@ -134,9 +133,21 @@ class ChatViewController: MessagesViewController {
         }
         
         // Set button
+        messageInputBar.sendButton.image = UIImage(systemName: "paperplane.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 24))
+        messageInputBar.sendButton.title = ""
         messageInputBar.setStackViewItems([attachButton], forStack: .left, animated: false)
         messageInputBar.setLeftStackViewWidthConstant(to: 24, animated: false)
-        //        messageInputBar.setStackViewItems([photoButton, micButton], forStack: .right, animated: false)
+        updateRightButtonsStatus(true)
+    }
+    
+    func updateRightButtonsStatus(_ active: Bool) {
+        if active {
+            messageInputBar.setStackViewItems([photoButton, micButton], forStack: .right, animated: false)
+            messageInputBar.setRightStackViewWidthConstant(to: 72, animated: false)
+        } else {
+            messageInputBar.setStackViewItems([messageInputBar.sendButton], forStack: .right, animated: false)
+            messageInputBar.setRightStackViewWidthConstant(to: 24, animated: false)
+        }
     }
     
     private func configureCustomCell() {

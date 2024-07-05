@@ -349,6 +349,11 @@ class ChatViewController: MessagesViewController {
     }
     
     private func createMessage(_ message: LocalMessage) {
+        if message.senderId != User.currentID {
+            // Update Read Status
+            markMessageAsRead(message)
+        }
+        
         let helper = IncomingMessageHelper(messageVC: self)
         if let newMessage = helper.createMessage(localMessage: message) {
             mkMessages.append(newMessage)
@@ -361,6 +366,12 @@ class ChatViewController: MessagesViewController {
         if let newMessage = helper.createMessage(localMessage: message) {
             self.mkMessages.insert(newMessage, at: 0)
             displayMessageCount += 1
+        }
+    }
+    
+    private func markMessageAsRead(_ message: LocalMessage) {
+        if message.senderId != User.currentID && message.status != kRead {
+            FirebaseMessageListener.shared.updateMessage(message, memberIds: [User.currentID, recipientId])
         }
     }
     

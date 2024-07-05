@@ -14,8 +14,10 @@ public let kChatRoomId = "chatRoomId"
 public let kSenderId = "senderId"
 public let kDate = "date"
 
+public let kStatus = "status"
 public let kSent = "sent"
 public let kRead = "read"
+public let kReadDate = "readDate"
 
 public let kText = "text"
 public let kPhoto = "photo"

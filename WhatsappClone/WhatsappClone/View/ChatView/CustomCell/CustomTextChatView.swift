@@ -70,12 +70,14 @@ class CustomTextChatView: MessageContentCell {
     }
     
     private func getInfoText(mkMessage: MKMessage) -> String {
-        if mkMessage.status == kSent {
-            return "\(mkMessage.sentDate.time()) · Sent"
+        if mkMessage.mkSender.senderId == User.currentID {
+            if mkMessage.status == kSent {
+                return "\(mkMessage.sentDate.time()) · Sent"
+            }
+            if mkMessage.status == kRead {
+                return "\(mkMessage.readDate.time()) · Read"
+            }
         }
-        if mkMessage.status == kRead {
-            return "\(mkMessage.readDate.time()) · Read"
-        }
-        return ""
+        return mkMessage.readDate.time()
     }
 }

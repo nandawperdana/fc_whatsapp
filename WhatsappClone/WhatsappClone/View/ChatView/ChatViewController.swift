@@ -383,7 +383,9 @@ class ChatViewController: MessagesViewController {
     
     private func listenForReadStatus() {
         FirebaseMessageListener.shared.listenForReadStatus(User.currentID, collectionId: chatId) { updatedMessage in
-            print("updated message \(updatedMessage.status)")
+            if updatedMessage.status != kSent {
+                self.updateMessage(updatedMessage)
+            }
         }
     }
     
@@ -416,6 +418,21 @@ class ChatViewController: MessagesViewController {
     
     private func updateTypingStatus(_ typing: Bool) {
         self.subTitleLabel.text = typing ? "Typing..." : "Tap here for contact info"
+    }
+    
+    private func updateMessage(_ message: LocalMessage) {
+        for idx in 0 ..< mkMessages.count {
+            if message.id == mkMessages[idx].messageId {
+                mkMessages[idx].status = message.status
+                mkMessages[idx].readDate = message.readDate
+                
+                DBManager.shared.saveToRealm(message)
+                
+                if mkMessages[idx].status == kRead {
+                    self.messagesCollectionView.reloadData()
+                }
+            }
+        }
     }
     
     // MARK: Helpers

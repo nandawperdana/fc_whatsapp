@@ -25,6 +25,8 @@ class OutgoingMessageHelper {
         if text != nil {
             sendTextMessage(message: message, text: text ?? "", memberIds: memberIds)
         }
+        
+        FirebaseRecentChatListener.shared.updateRecentChat(chatRoomId: chatId, lastMessage: text ?? "")
     }
     
     class func sendMessage(message: LocalMessage, memberIds: [String]) {

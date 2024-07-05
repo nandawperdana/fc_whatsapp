@@ -79,6 +79,18 @@ class ChatViewController: MessagesViewController {
         updateTypingStatus(false)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        FirebaseRecentChatListener.shared.resetRecentChatCounter(chatRoomId: chatId)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        FirebaseRecentChatListener.shared.resetRecentChatCounter(chatRoomId: chatId)
+    }
+    
     // MARK: Config UI
     private func configureMessageCollectionView() {
         messagesCollectionView.messagesDataSource = self

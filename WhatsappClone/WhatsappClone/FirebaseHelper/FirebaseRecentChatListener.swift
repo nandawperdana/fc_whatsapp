@@ -46,7 +46,56 @@ class FirebaseRecentChatListener {
         }
     }
     
+    // MARK: - Update Recent Chat
+    func updateRecentChat(chatRoomId: String, lastMessage: String) {
+        FirebaseReference(.Recent).whereField(kChatRoomId, isEqualTo: chatRoomId).getDocuments { snapshot, error in
+            guard let documents = snapshot?.documents else {
+                print("No Documents Found")
+                return
+            }
+            
+            let allRecents = documents.compactMap { snapshot in
+                return try? snapshot.data(as: RecentChat.self)
+            }
+            
+            for recent in allRecents {
+                // Update Last Message
+                self.updateRecentWithNewMessage(recent: recent, lastMessage: lastMessage)
+            }
+        }
+    }
+    
+    private func updateRecentWithNewMessage(recent: RecentChat, lastMessage: String) {
+        var tempRecent = recent
+        
+        if tempRecent.senderId != User.currentID {
+            tempRecent.unreadCounter += 1
+        }
+        
+        tempRecent.lastMessage = lastMessage
+        tempRecent.date = Date()
+        
+        self.saveRecentChat(tempRecent)
+    }
+    
     // MARK: - update unread counter
+    func resetRecentChatCounter(chatRoomId: String) {
+        FirebaseReference(.Recent).whereField(kChatRoomId, isEqualTo: chatRoomId).whereField(kSenderId, isEqualTo: User.currentID).getDocuments { snapshot, error in
+            guard let documents = snapshot?.documents else {
+                print("No Documents Found")
+                return
+            }
+            
+            let allRecents = documents.compactMap { snapshot in
+                return try? snapshot.data(as: RecentChat.self)
+            }
+            
+            if allRecents.count > 0 {
+                self.clearUnreadCounter(recentChat: allRecents.first!)
+            }
+        }
+    }
+    
     func clearUnreadCounter(recentChat: RecentChat) {
         var newRecentChat = recentChat
         newRecentChat.unreadCounter = 0

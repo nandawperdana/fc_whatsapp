@@ -350,7 +350,7 @@ class ChatViewController: MessagesViewController {
             for item in items {
                 switch item {
                 case .photo(let photo):
-                    print("photo item \(photo)")
+                    self.sendMessage(text: nil, photo: photo.image, video: nil, audio: nil)
                 case .video(let v):
                     print("video item \(v)")
                 }

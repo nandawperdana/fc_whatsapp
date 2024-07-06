@@ -26,6 +26,11 @@ class OutgoingMessageHelper {
             sendTextMessage(message: message, text: text ?? "", memberIds: memberIds)
         }
         
+        // Photo Message type
+        if let photo = photo {
+            sendPictureMessage(message: message, photo: photo, memberIds: memberIds)
+        }
+        
         FirebaseRecentChatListener.shared.updateRecentChat(chatRoomId: chatId, lastMessage: text ?? "")
     }
     
@@ -44,4 +49,23 @@ func sendTextMessage(message: LocalMessage, text: String, memberIds: [String]) {
     message.message = text
     message.type = kText
     OutgoingMessageHelper.sendMessage(message: message, memberIds: memberIds)
+}
+
+func sendPictureMessage(message: LocalMessage, photo: UIImage, memberIds: [String]) {
+    message.message = "Picture Message"
+    message.type = kPhoto
+    
+    // Get File
+    let fileName = Date().stringDate()
+    let fileDir = "MediaMessages/Photo/" + "\(message.chatRoomId)/" + "_\(fileName).jpg"
+    
+    // Upload File
+    FirebaseStorageHelper.saveFileToLocal(file: photo.jpegData(compressionQuality: 0.6)! as NSData, fileName: fileName)
+    
+    FirebaseStorageHelper.uploadImage(photo, directory: fileDir) { imageLink in
+        if let url = imageLink {
+            message.photoUrl = url
+            OutgoingMessageHelper.sendMessage(message: message, memberIds: memberIds)
+        }
+    }
 }

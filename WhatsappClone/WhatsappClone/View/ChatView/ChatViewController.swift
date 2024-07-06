@@ -9,6 +9,7 @@ import UIKit
 import MessageKit
 import InputBarAccessoryView
 import RealmSwift
+import YPImagePicker
 
 class ChatViewController: MessagesViewController {
     // MARK: Vars
@@ -37,6 +38,9 @@ class ChatViewController: MessagesViewController {
     var allLocalMessages: Results<LocalMessage>!
     
     var typingCounter = 0
+    
+    // MARK: Image Picker
+    var picker: YPImagePicker?
     
     // MARK: Paging
     var maxMessageNumber = 0
@@ -69,6 +73,7 @@ class ChatViewController: MessagesViewController {
         configureMessageCollectionView()
         configureMessageInputBar()
         configureCustomCell()
+//        configureImagePicker()
         
         // Load Chat
         loadChats()
@@ -275,6 +280,15 @@ class ChatViewController: MessagesViewController {
         ])
     }
     
+    private func configureImagePicker() {
+        var config = YPImagePickerConfiguration()
+        config.showsPhotoFilters = false
+        config.screens = [.library, .photo]
+        config.library.maxNumberOfItems = 3
+        
+        picker = YPImagePicker(configuration: config)
+    }
+    
     // MARK: Actions
     func sendMessage(text: String?, photo: UIImage?, video: String?, audio: String?, audioDuration: Float = 0.0) {
         OutgoingMessageHelper.send(chatId: chatId, text: text, photo: photo, video: video, audio: audio, memberIds: [User.currentID, recipientId])
@@ -293,11 +307,11 @@ class ChatViewController: MessagesViewController {
         let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let optionTakePhoto = UIAlertAction(title: "Camera", style: .default) { alert in
-            print("Open camera")
+            self.onShowLibrary(showCamera: true)
         }
         
         let optionShowLibrary = UIAlertAction(title: "Library", style: .default) { alert in
-            print("show library")
+            self.onShowLibrary(showCamera: false)
         }
         
         let optionCancel = UIAlertAction(title: "Cancel", style: .cancel)
@@ -310,6 +324,41 @@ class ChatViewController: MessagesViewController {
         optionMenu.addAction(optionCancel)
         
         self.present(optionMenu, animated: true, completion: nil)
+    }
+    
+    private func onShowLibrary(showCamera: Bool) {
+        
+        // Re-Config
+        var config = YPImagePickerConfiguration()
+        config.showsPhotoFilters = false
+        if showCamera {
+            config.screens = [.photo]
+        } else {
+            config.screens = [.library]
+            config.library.maxNumberOfItems = 3
+        }
+        
+        picker = YPImagePicker(configuration: config)
+        
+        guard let picker = picker else { return }
+        
+        picker.didFinishPicking { [unowned picker] items, canceled in
+            if canceled {
+                print("Cancel Choose Image")
+            }
+            
+            for item in items {
+                switch item {
+                case .photo(let photo):
+                    print("photo item \(photo)")
+                case .video(let v):
+                    print("video item \(v)")
+                }
+            }
+            picker.dismiss(animated: true, completion: nil)
+        }
+        
+        present(picker, animated: true, completion: nil)
     }
     
     // MARK: Load Chats

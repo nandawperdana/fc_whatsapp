@@ -27,7 +27,9 @@ extension ChatViewController: MessagesDataSource {
         return cell
     }
     
-//    func photoCell(for message: any MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UICollectionViewCell? {
-//        // 
-//    }
+    func photoCell(for message: any MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UICollectionViewCell? {
+        let cell = messagesCollectionView.dequeueReusableCell(CustomImageChatView.self, for: indexPath)
+        cell.configure(with: message, at: indexPath, and: messagesCollectionView)
+        return cell
+    }
 }

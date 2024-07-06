@@ -23,6 +23,7 @@
 		E26AE1022C1896E70095C9D0 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */; };
 		E26F17272C39A24700713995 /* CustomImageChatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26F17262C39A24700713995 /* CustomImageChatView.xib */; };
 		E26F17292C39A27800713995 /* CustomImageChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26F17282C39A27700713995 /* CustomImageChatView.swift */; };
+		E26F172B2C39A8E300713995 /* PhotoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26F172A2C39A8E300713995 /* PhotoMessage.swift */; };
 		E275A7632C36FF080029DE77 /* FirebaseTypingListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E275A7622C36FF080029DE77 /* FirebaseTypingListener.swift */; };
 		E27F276F2C2BB922007875F0 /* RecentChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F276E2C2BB922007875F0 /* RecentChatTableViewCell.swift */; };
 		E27F27712C2BBFD9007875F0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F27702C2BBFD9007875F0 /* Extension.swift */; };
@@ -71,6 +72,7 @@
 		E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
 		E26F17262C39A24700713995 /* CustomImageChatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomImageChatView.xib; sourceTree = "<group>"; };
 		E26F17282C39A27700713995 /* CustomImageChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageChatView.swift; sourceTree = "<group>"; };
+		E26F172A2C39A8E300713995 /* PhotoMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMessage.swift; sourceTree = "<group>"; };
 		E275A7622C36FF080029DE77 /* FirebaseTypingListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTypingListener.swift; sourceTree = "<group>"; };
 		E27F276E2C2BB922007875F0 /* RecentChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatTableViewCell.swift; sourceTree = "<group>"; };
 		E27F27702C2BBFD9007875F0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				E29F2A412C2A826E001C590F /* RecentChat.swift */,
 				E2F63A1B2C31A984009D351A /* MKSender.swift */,
 				E2F63A1D2C31AA4C009D351A /* MKMessage.swift */,
+				E26F172A2C39A8E300713995 /* PhotoMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				E26AE1002C1895FA0095C9D0 /* FCollectionReference.swift in Sources */,
 				E2BC5D022C14A4B900654538 /* Constants.swift in Sources */,
 				E217CF5F2C2724EC00E554AD /* SettingsTableViewController.swift in Sources */,
+				E26F172B2C39A8E300713995 /* PhotoMessage.swift in Sources */,
 				E28FBB512C35908100454DD7 /* CustomTextChatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

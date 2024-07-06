@@ -79,3 +79,21 @@ class CustomImageChatView: MessageContentCell {
         return mkMessage.readDate.time()
     }
 }
+
+open class CustomMediaMessageSizeCalculator: MediaMessageSizeCalculator {
+    open override func messageContainerSize(for message: MessageType) -> CGSize {
+        let maxWidth = messageContainerMaxWidth(for: message)
+        let sizeForMediaItem = { (maxWidth: CGFloat, item: MediaItem) -> CGSize in
+            let width = (item.image?.size.width ?? 10) > maxWidth - 42 ? maxWidth - 42 : (item.image?.size.width ?? 10)
+            let height = (width / (item.image?.size.width ?? 10)) * (item.image?.size.height ?? 10)
+            return CGSize(width: width + 24, height: height + 24 + 32)
+        }
+        
+        switch message.kind {
+        case .photo(let item):
+            return sizeForMediaItem(maxWidth, item)
+        default:
+            fatalError("undhandled media size \(message.kind)")
+        }
+    }
+}

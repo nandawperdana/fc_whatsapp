@@ -144,7 +144,7 @@ class ChatViewController: MessagesViewController {
         
         // On Buttons Tap
         attachButton.onTouchUpInside { item in
-            print("attach")
+            self.attachMessageAction()
         }
         
         photoButton.onTouchUpInside { item in
@@ -287,6 +287,29 @@ class ChatViewController: MessagesViewController {
             profileView.user = user
             self.navigationController?.pushViewController(profileView, animated: true)
         }
+    }
+    
+    private func attachMessageAction() {
+        let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let optionTakePhoto = UIAlertAction(title: "Camera", style: .default) { alert in
+            print("Open camera")
+        }
+        
+        let optionShowLibrary = UIAlertAction(title: "Library", style: .default) { alert in
+            print("show library")
+        }
+        
+        let optionCancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        optionTakePhoto.setValue(UIImage(systemName: "camera"), forKey: "image")
+        optionShowLibrary.setValue(UIImage(systemName: "photo.fill.on.rectangle.fill"), forKey: "image")
+        
+        optionMenu.addAction(optionTakePhoto)
+        optionMenu.addAction(optionShowLibrary)
+        optionMenu.addAction(optionCancel)
+        
+        self.present(optionMenu, animated: true, completion: nil)
     }
     
     // MARK: Load Chats

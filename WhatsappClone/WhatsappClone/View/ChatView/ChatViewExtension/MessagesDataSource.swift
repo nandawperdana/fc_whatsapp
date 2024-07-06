@@ -26,4 +26,8 @@ extension ChatViewController: MessagesDataSource {
         cell.configure(with: mkMessages[indexPath.section], at: indexPath, and: messagesCollectionView)
         return cell
     }
+    
+//    func photoCell(for message: any MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UICollectionViewCell? {
+//        // 
+//    }
 }

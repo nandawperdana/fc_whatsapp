@@ -21,6 +21,8 @@
 		E25151752C2D229E0038741C /* RecentChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25151742C2D229E0038741C /* RecentChatTableViewController.swift */; };
 		E26AE1002C1895FA0095C9D0 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */; };
 		E26AE1022C1896E70095C9D0 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */; };
+		E26F17272C39A24700713995 /* CustomImageChatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E26F17262C39A24700713995 /* CustomImageChatView.xib */; };
+		E26F17292C39A27800713995 /* CustomImageChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26F17282C39A27700713995 /* CustomImageChatView.swift */; };
 		E275A7632C36FF080029DE77 /* FirebaseTypingListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = E275A7622C36FF080029DE77 /* FirebaseTypingListener.swift */; };
 		E27F276F2C2BB922007875F0 /* RecentChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F276E2C2BB922007875F0 /* RecentChatTableViewCell.swift */; };
 		E27F27712C2BBFD9007875F0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27F27702C2BBFD9007875F0 /* Extension.swift */; };
@@ -67,6 +69,8 @@
 		E25151742C2D229E0038741C /* RecentChatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatTableViewController.swift; sourceTree = "<group>"; };
 		E26AE0FF2C1895FA0095C9D0 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		E26AE1012C1896E70095C9D0 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
+		E26F17262C39A24700713995 /* CustomImageChatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomImageChatView.xib; sourceTree = "<group>"; };
+		E26F17282C39A27700713995 /* CustomImageChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageChatView.swift; sourceTree = "<group>"; };
 		E275A7622C36FF080029DE77 /* FirebaseTypingListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTypingListener.swift; sourceTree = "<group>"; };
 		E27F276E2C2BB922007875F0 /* RecentChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatTableViewCell.swift; sourceTree = "<group>"; };
 		E27F27702C2BBFD9007875F0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -151,8 +155,10 @@
 		E28FBB4F2C35906400454DD7 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				E26F17262C39A24700713995 /* CustomImageChatView.xib */,
 				E28FBB522C3590D100454DD7 /* CustomTextChatView.xib */,
 				E28FBB502C35908100454DD7 /* CustomTextChatView.swift */,
+				E26F17282C39A27700713995 /* CustomImageChatView.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2B0CF872C0B619C006CA5A5 /* Assets.xcassets in Resources */,
+				E26F17272C39A24700713995 /* CustomImageChatView.xib in Resources */,
 				E28FBB532C3590D100454DD7 /* CustomTextChatView.xib in Resources */,
 				E2B0CF8A2C0B619C006CA5A5 /* Base in Resources */,
 				E2B0CF852C0B619A006CA5A5 /* Base in Resources */,
@@ -409,6 +416,7 @@
 				E251516D2C2CF6590038741C /* StartChatHelper.swift in Sources */,
 				E2B0CF7E2C0B619A006CA5A5 /* AppDelegate.swift in Sources */,
 				E24FE77A2C32F2DD00F58417 /* OutgoingMessageHelper.swift in Sources */,
+				E26F17292C39A27800713995 /* CustomImageChatView.swift in Sources */,
 				E24FE7782C32EE3600F58417 /* DBManager.swift in Sources */,
 				E2F63A1E2C31AA4C009D351A /* MKMessage.swift in Sources */,
 				E2F63A182C31A574009D351A /* MessagesLayoutDelegate.swift in Sources */,

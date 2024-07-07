@@ -41,6 +41,7 @@
 		E2B0CF852C0B619A006CA5A5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E2B0CF842C0B619A006CA5A5 /* Base */; };
 		E2B0CF872C0B619C006CA5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2B0CF862C0B619C006CA5A5 /* Assets.xcassets */; };
 		E2B0CF8A2C0B619C006CA5A5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E2B0CF892C0B619C006CA5A5 /* Base */; };
+		E2B5D0812C3AEAFF00CC1AA1 /* BasicAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5D0802C3AEAFF00CC1AA1 /* BasicAudioController.swift */; };
 		E2BC5D022C14A4B900654538 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC5D012C14A4B900654538 /* Constants.swift */; };
 		E2E9EBF02C11F019003E1B06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E9EBEF2C11F018003E1B06 /* User.swift */; };
 		E2E9EBF72C11F461003E1B06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */; };
@@ -96,6 +97,7 @@
 		E2B0CF862C0B619C006CA5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2B0CF892C0B619C006CA5A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2B0CF8B2C0B619C006CA5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2B5D0802C3AEAFF00CC1AA1 /* BasicAudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAudioController.swift; sourceTree = "<group>"; };
 		E2BC5D012C14A4B900654538 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E2E9EBEF2C11F018003E1B06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 		E2A57A902C287114005BBD40 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				E2B5D0802C3AEAFF00CC1AA1 /* BasicAudioController.swift */,
 				E2A57A912C287124005BBD40 /* Util.swift */,
 				E27F27702C2BBFD9007875F0 /* Extension.swift */,
 				E251516C2C2CF6590038741C /* StartChatHelper.swift */,
@@ -425,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E242B5072C0E0B0100642697 /* LoginViewController.swift in Sources */,
+				E2B5D0812C3AEAFF00CC1AA1 /* BasicAudioController.swift in Sources */,
 				E2F63A1A2C31A5C4009D351A /* InputBarAccessoryViewDelegate.swift in Sources */,
 				E2B0CF822C0B619A006CA5A5 /* ViewController.swift in Sources */,
 				E21E5E952C305616004C2BE8 /* ChatViewController.swift in Sources */,

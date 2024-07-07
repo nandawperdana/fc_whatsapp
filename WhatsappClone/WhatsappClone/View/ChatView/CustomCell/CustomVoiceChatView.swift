@@ -8,20 +8,21 @@
 import Foundation
 import MessageKit
 
-class CustomVoiceChatView: MessageContentCell {
+open class CustomVoiceChatView: MessageContentCell {
     // MARK: IBOutlets
     @IBOutlet weak var leftBubble: UIView!
     @IBOutlet weak var rightBubble: UIView!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var customView: UIView!
+    @IBOutlet weak var playImageView: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupUI()
     }
@@ -37,7 +38,7 @@ class CustomVoiceChatView: MessageContentCell {
         self.messageContainerView.addSubview(contentView)
     }
     
-    override func configure(with message: any MessageType, at indexPath: IndexPath, and messagesCollectionView: MessagesCollectionView) {
+    open override func configure(with message: any MessageType, at indexPath: IndexPath, and messagesCollectionView: MessagesCollectionView) {
         
         guard let mkMessage = message as? MKMessage else { return }
         
@@ -45,9 +46,7 @@ class CustomVoiceChatView: MessageContentCell {
         
         switch message.kind {
         case .audio(let audio):
-            let minute = "\(Int(audio.duration) / 60)"
-            let second = "\(Int(audio.duration) % 60 < 10 ? "0" : "")\(Int(audio.duration) % 60)"
-            durationLabel.text = "\(minute):\(second)"
+            durationLabel.text = getDurationFormat(duration: audio.duration)
             infoLabel.text = getInfoText(mkMessage: mkMessage)
         default:
             break
@@ -82,7 +81,13 @@ class CustomVoiceChatView: MessageContentCell {
         return mkMessage.readDate.time()
     }
     
-    override func handleTapGesture(_ gesture: UIGestureRecognizer) {
+    func getDurationFormat(duration: Float) -> String {
+        let minute = "\(Int(duration) / 60)"
+        let second = "\(Int(duration) % 60 < 10 ? "0" : "")\(Int(duration) % 60)"
+        return "\(minute):\(second)"
+    }
+    
+    open override func handleTapGesture(_ gesture: UIGestureRecognizer) {
         delegate?.didTapMessage(in: self)
     }
 }

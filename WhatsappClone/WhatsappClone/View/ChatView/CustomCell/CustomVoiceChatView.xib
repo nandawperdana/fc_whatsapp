@@ -13,6 +13,7 @@
                 <outlet property="durationLabel" destination="iWr-Qj-YmO" id="6QQ-Qq-psT"/>
                 <outlet property="infoLabel" destination="07c-1Z-zLP" id="r56-KY-FGF"/>
                 <outlet property="leftBubble" destination="kvm-rG-jOR" id="tql-zZ-1rr"/>
+                <outlet property="playImageView" destination="9GC-Ey-Hk5" id="cDO-sX-5Rl"/>
                 <outlet property="rightBubble" destination="czT-C0-2HQ" id="5DD-GB-hDZ"/>
             </connections>
         </placeholder>

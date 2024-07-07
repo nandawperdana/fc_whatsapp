@@ -30,7 +30,24 @@ extension ChatViewController: MessageCellDelegate {
     func didTapMessage(in cell: MessageCollectionViewCell) {
         if let indexPath = messagesCollectionView.indexPath(for: cell) {
             let mkMessage = mkMessages[indexPath.section]
-            print("test tap message \(mkMessage.audioItem?.url)")
+            
+            if let audio = mkMessage.audioItem {
+                guard audioController.state != .stopped else {
+                    audioController.playSound(for: mkMessage, in: cell as! CustomVoiceChatView)
+                    return
+                }
+                
+                if audioController.playingMessage?.messageId == mkMessage.messageId {
+                    if audioController.state == .playing {
+                        audioController.pauseSound(for: mkMessage, in: cell as! CustomVoiceChatView)
+                    } else {
+                        audioController.resumeSound()
+                    }
+                } else {
+                    audioController.stopAnyOngoingPlaying()
+                    audioController.playSound(for: mkMessage, in: cell as! CustomVoiceChatView)
+                }
+            }
         }
     }
 }

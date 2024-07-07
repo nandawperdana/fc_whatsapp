@@ -189,6 +189,7 @@ class ChatViewController: MessagesViewController {
     private func configureCustomCell() {
         messagesCollectionView.register(CustomTextChatView.self)
         messagesCollectionView.register(CustomImageChatView.self)
+        messagesCollectionView.register(CustomVoiceChatView.self)
         
         // Text Cell
         let textCellCalc = messagesCollectionView.messagesCollectionViewFlowLayout.textMessageSizeCalculator
@@ -199,6 +200,10 @@ class ChatViewController: MessagesViewController {
         // Media Cell Calc
         let mediaCellCalc = CustomMediaMessageSizeCalculator(layout: messagesCollectionView.messagesCollectionViewFlowLayout)
         messagesCollectionView.messagesCollectionViewFlowLayout.photoMessageSizeCalculator = mediaCellCalc
+        
+        // Audio Cell Calc
+        let audioCellCalc = CustomAudioMessageSizeCalculator(layout: messagesCollectionView.messagesCollectionViewFlowLayout)
+        messagesCollectionView.messagesCollectionViewFlowLayout.audioMessageSizeCalculator = audioCellCalc
         
         messagesCollectionView.messagesCollectionViewFlowLayout.setMessageIncomingAvatarSize(.zero)
         messagesCollectionView.messagesCollectionViewFlowLayout.setMessageOutgoingAvatarSize(.zero)

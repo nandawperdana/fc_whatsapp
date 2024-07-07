@@ -26,4 +26,11 @@ extension ChatViewController: MessageCellDelegate {
             }
         }
     }
+    
+    func didTapMessage(in cell: MessageCollectionViewCell) {
+        if let indexPath = messagesCollectionView.indexPath(for: cell) {
+            let mkMessage = mkMessages[indexPath.section]
+            print("test tap message \(mkMessage.audioItem?.url)")
+        }
+    }
 }

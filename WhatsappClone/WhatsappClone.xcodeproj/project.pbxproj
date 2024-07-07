@@ -54,6 +54,8 @@
 		E2F63A212C31AD40009D351A /* LocalMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A202C31AD40009D351A /* LocalMessage.swift */; };
 		E2F9C7532C3AC3D700B049D9 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9C7522C3AC3D700B049D9 /* AudioRecorder.swift */; };
 		E2F9C7552C3AD4CB00B049D9 /* AudioMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9C7542C3AD4CB00B049D9 /* AudioMessage.swift */; };
+		E2F9C7572C3AD87000B049D9 /* CustomVoiceChatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2F9C7562C3AD87000B049D9 /* CustomVoiceChatView.xib */; };
+		E2F9C7592C3AD8DB00B049D9 /* CustomVoiceChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9C7582C3AD8DB00B049D9 /* CustomVoiceChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +109,8 @@
 		E2F63A202C31AD40009D351A /* LocalMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMessage.swift; sourceTree = "<group>"; };
 		E2F9C7522C3AC3D700B049D9 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		E2F9C7542C3AD4CB00B049D9 /* AudioMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMessage.swift; sourceTree = "<group>"; };
+		E2F9C7562C3AD87000B049D9 /* CustomVoiceChatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomVoiceChatView.xib; sourceTree = "<group>"; };
+		E2F9C7582C3AD8DB00B049D9 /* CustomVoiceChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVoiceChatView.swift; sourceTree = "<group>"; };
 		E74BB904DB28E19EF07052BE /* Pods-WhatsappClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappClone.release.xcconfig"; path = "Target Support Files/Pods-WhatsappClone/Pods-WhatsappClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,10 +165,12 @@
 		E28FBB4F2C35906400454DD7 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				E2F9C7562C3AD87000B049D9 /* CustomVoiceChatView.xib */,
 				E26F17262C39A24700713995 /* CustomImageChatView.xib */,
 				E28FBB522C3590D100454DD7 /* CustomTextChatView.xib */,
 				E28FBB502C35908100454DD7 /* CustomTextChatView.swift */,
 				E26F17282C39A27700713995 /* CustomImageChatView.swift */,
+				E2F9C7582C3AD8DB00B049D9 /* CustomVoiceChatView.swift */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 				E2B0CF872C0B619C006CA5A5 /* Assets.xcassets in Resources */,
 				E26F17272C39A24700713995 /* CustomImageChatView.xib in Resources */,
 				E28FBB532C3590D100454DD7 /* CustomTextChatView.xib in Resources */,
+				E2F9C7572C3AD87000B049D9 /* CustomVoiceChatView.xib in Resources */,
 				E2B0CF8A2C0B619C006CA5A5 /* Base in Resources */,
 				E2B0CF852C0B619A006CA5A5 /* Base in Resources */,
 				E2E9EBF72C11F461003E1B06 /* GoogleService-Info.plist in Resources */,
@@ -456,6 +463,7 @@
 				E2F9C7552C3AD4CB00B049D9 /* AudioMessage.swift in Sources */,
 				E217CF5F2C2724EC00E554AD /* SettingsTableViewController.swift in Sources */,
 				E26F172B2C39A8E300713995 /* PhotoMessage.swift in Sources */,
+				E2F9C7592C3AD8DB00B049D9 /* CustomVoiceChatView.swift in Sources */,
 				E28FBB512C35908100454DD7 /* CustomTextChatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,4 +32,10 @@ extension ChatViewController: MessagesDataSource {
         cell.configure(with: message, at: indexPath, and: messagesCollectionView)
         return cell
     }
+    
+    func audioCell(for message: any MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UICollectionViewCell? {
+        let cell = messagesCollectionView.dequeueReusableCell(CustomVoiceChatView.self, for: indexPath)
+        cell.configure(with: message, at: indexPath, and: messagesCollectionView)
+        return cell
+    }
 }

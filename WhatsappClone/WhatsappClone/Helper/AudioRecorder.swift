@@ -56,6 +56,7 @@ class AudioRecorder: NSObject, AVAudioRecorderDelegate {
     func startRecording(fileName: String) {
         guard isPermissionGranted else { return }
         
+        setupRecordSession()
         let audioFileName = getDocumentsUrl().appendingPathComponent(fileName + ".m4a", isDirectory: false)
         
         let settings = [

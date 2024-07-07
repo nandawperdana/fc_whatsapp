@@ -116,6 +116,33 @@ class FirebaseStorageHelper {
         }
     }
     
+    class func downloadAudio(url: String, completion: @escaping (_ audioFileName: String) -> Void) {
+        let audioFileName = fileNameFrom(url) + ".m4a"
+        
+        if fileExistsAtPath(audioFileName) {
+            completion(audioFileName)
+        } else {
+            if url != "" {
+                let fileUrl = URL(string: url)
+                let downloadQueue = DispatchQueue(label: "audioDownloadQueue")
+                
+                downloadQueue.async {
+                    let data = NSData(contentsOf: fileUrl!)
+                    
+                    if data != nil {
+                        FirebaseStorageHelper.saveFileToLocal(file: data!, fileName: audioFileName)
+                        
+                        DispatchQueue.main.async {
+                            completion(audioFileName)
+                        }
+                    } else {
+                        print("No Document Found")
+                    }
+                }
+            }
+        }
+    }
+    
     // MARK: - Save to Local
     class func saveFileToLocal(file: NSData, fileName: String) {
         let fileUrl = getDocumentsUrl().appendingPathComponent(fileName, isDirectory: false)

@@ -53,6 +53,7 @@
 		E2F63A1E2C31AA4C009D351A /* MKMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A1D2C31AA4C009D351A /* MKMessage.swift */; };
 		E2F63A212C31AD40009D351A /* LocalMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A202C31AD40009D351A /* LocalMessage.swift */; };
 		E2F9C7532C3AC3D700B049D9 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9C7522C3AC3D700B049D9 /* AudioRecorder.swift */; };
+		E2F9C7552C3AD4CB00B049D9 /* AudioMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9C7542C3AD4CB00B049D9 /* AudioMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		E2F63A1D2C31AA4C009D351A /* MKMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMessage.swift; sourceTree = "<group>"; };
 		E2F63A202C31AD40009D351A /* LocalMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMessage.swift; sourceTree = "<group>"; };
 		E2F9C7522C3AC3D700B049D9 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		E2F9C7542C3AD4CB00B049D9 /* AudioMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMessage.swift; sourceTree = "<group>"; };
 		E74BB904DB28E19EF07052BE /* Pods-WhatsappClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappClone.release.xcconfig"; path = "Target Support Files/Pods-WhatsappClone/Pods-WhatsappClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,6 +274,7 @@
 				E2F63A1B2C31A984009D351A /* MKSender.swift */,
 				E2F63A1D2C31AA4C009D351A /* MKMessage.swift */,
 				E26F172A2C39A8E300713995 /* PhotoMessage.swift */,
+				E2F9C7542C3AD4CB00B049D9 /* AudioMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				E27F276F2C2BB922007875F0 /* RecentChatTableViewCell.swift in Sources */,
 				E26AE1002C1895FA0095C9D0 /* FCollectionReference.swift in Sources */,
 				E2BC5D022C14A4B900654538 /* Constants.swift in Sources */,
+				E2F9C7552C3AD4CB00B049D9 /* AudioMessage.swift in Sources */,
 				E217CF5F2C2724EC00E554AD /* SettingsTableViewController.swift in Sources */,
 				E26F172B2C39A8E300713995 /* PhotoMessage.swift in Sources */,
 				E28FBB512C35908100454DD7 /* CustomTextChatView.swift in Sources */,

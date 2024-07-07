@@ -21,7 +21,7 @@ class MKMessage: NSObject, MessageType {
     var isIncoming: Bool
     
     var photoItem: PhotoMessage?
-//    var audioItem: AudioMessage?
+    var audioItem: AudioMessage?
     
     init(message: LocalMessage) {
         self.messageId = message.id
@@ -40,10 +40,10 @@ class MKMessage: NSObject, MessageType {
             let photoItem = PhotoMessage(path: message.photoUrl)
             self.kind = MessageKind.photo(photoItem)
             self.photoItem = photoItem
-//        case kAudio:
-//            let audioItem = AudioMessage()
-//            self.kind = MessageKind.audio(audioItem)
-//            self.audioItem = audioItem
+        case kAudio:
+            let audioItem = AudioMessage(duration: Float(message.audioDuration))
+            self.kind = MessageKind.audio(audioItem)
+            self.audioItem = audioItem
         default:
             self.kind = MessageKind.text(message.message)
         }

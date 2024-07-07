@@ -32,7 +32,19 @@ class IncomingMessageHelper {
         }
         
         if localMessage.type == kAudio {
+            let audioItem = AudioMessage(duration: Float(localMessage.audioDuration))
             
+            mkMessage.audioItem = audioItem
+            mkMessage.kind = MessageKind.audio(audioItem)
+            
+            // Download Audio
+            FirebaseStorageHelper.downloadAudio(url: localMessage.audioUrl) { audioFileName in
+                let audioUrl = URL(fileURLWithPath: fileDocumentsDirectory(fileName: audioFileName))
+                
+                mkMessage.audioItem?.url = audioUrl
+            }
+            
+            self.messageVC.messagesCollectionView.reloadData()
         }
         
         return mkMessage

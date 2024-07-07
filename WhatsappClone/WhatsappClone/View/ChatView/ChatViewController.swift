@@ -394,7 +394,7 @@ class ChatViewController: MessagesViewController {
             
             audioFileName = ""
         default:
-            print("default")
+            print("default \(longPressGesture.state)")
         }
     }
     

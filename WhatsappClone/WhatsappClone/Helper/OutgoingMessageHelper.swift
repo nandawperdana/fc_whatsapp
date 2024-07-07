@@ -32,7 +32,7 @@ class OutgoingMessageHelper {
         }
         
         if let audio = audio {
-            print("Test duration \(audioDuration)")
+            sendAudioMessage(message: message, audioFileName: audio, audioDuration: audioDuration, memberIds: memberIds)
         }
         
         FirebaseRecentChatListener.shared.updateRecentChat(chatRoomId: chatId, lastMessage: message.message)
@@ -69,6 +69,24 @@ func sendPictureMessage(message: LocalMessage, photo: UIImage, memberIds: [Strin
     FirebaseStorageHelper.uploadImage(photo, directory: fileDir) { imageLink in
         if let url = imageLink {
             message.photoUrl = url
+            OutgoingMessageHelper.sendMessage(message: message, memberIds: memberIds)
+        }
+    }
+}
+
+func sendAudioMessage(message: LocalMessage, audioFileName: String, audioDuration: Float, memberIds: [String]) {
+    message.message = "Audio Message"
+    message.type = kAudio
+    
+    // Get File
+    let fileDir = "MediaMessages/Audio/" + "\(message.chatRoomId)/" + "_\(audioFileName).m4a"
+    
+    // Upload File
+    FirebaseStorageHelper.uploadAudio(audioFileName, directory: fileDir) { audioLink in
+        if let link = audioLink {
+            message.audioUrl = link
+            message.audioDuration = Double(audioDuration)
+            
             OutgoingMessageHelper.sendMessage(message: message, memberIds: memberIds)
         }
     }

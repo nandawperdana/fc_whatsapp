@@ -51,8 +51,7 @@ class ChatViewController: MessagesViewController {
     var notificationToken: NotificationToken?
     var longPressGesture: UILongPressGestureRecognizer!
     var audioFileName = ""
-    var audioDuration = 0
-    var audioDate: Date!
+    var audioDuration: Date!
     
     // MARK: Inits
     init(chatId: String = "", recipientId: String = "", recipientName: String = "", recipientAvatar: String = "") {
@@ -306,7 +305,7 @@ class ChatViewController: MessagesViewController {
     
     // MARK: Actions
     func sendMessage(text: String?, photo: UIImage?, video: String?, audio: String?, audioDuration: Float = 0.0) {
-        OutgoingMessageHelper.send(chatId: chatId, text: text, photo: photo, video: video, audio: audio, memberIds: [User.currentID, recipientId])
+        OutgoingMessageHelper.send(chatId: chatId, text: text, photo: photo, video: video, audio: audio, audioDuration: audioDuration, memberIds: [User.currentID, recipientId])
     }
     
     @objc func onHeaderViewTap() {
@@ -379,14 +378,16 @@ class ChatViewController: MessagesViewController {
     @objc func recordAudio() {
         switch longPressGesture.state {
         case .began:
-            audioDate = Date()
+            audioDuration = Date()
             audioFileName = Date().stringDate()
-            // Start record
-            AudioRecorder.shared
+            AudioRecorder.shared.startRecording(fileName: audioFileName)
         case .ended:
+            AudioRecorder.shared.finishRecording()
+            
             // send audio message
             if fileExistsAtPath(audioFileName + ".m4a") {
-                // send audio message
+                let duration = audioDuration.interval(ofComponent: .second, from: Date())
+                sendMessage(text: nil, photo: nil, video: nil, audio: audioFileName, audioDuration: duration)
             } else {
                 print("no file found")
             }

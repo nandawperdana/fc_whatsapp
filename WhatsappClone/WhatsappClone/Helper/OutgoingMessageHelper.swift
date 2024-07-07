@@ -31,6 +31,10 @@ class OutgoingMessageHelper {
             sendPictureMessage(message: message, photo: photo, memberIds: memberIds)
         }
         
+        if let audio = audio {
+            print("Test duration \(audioDuration)")
+        }
+        
         FirebaseRecentChatListener.shared.updateRecentChat(chatRoomId: chatId, lastMessage: message.message)
     }
     

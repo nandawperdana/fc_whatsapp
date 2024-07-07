@@ -52,6 +52,7 @@
 		E2F63A1C2C31A984009D351A /* MKSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A1B2C31A984009D351A /* MKSender.swift */; };
 		E2F63A1E2C31AA4C009D351A /* MKMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A1D2C31AA4C009D351A /* MKMessage.swift */; };
 		E2F63A212C31AD40009D351A /* LocalMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A202C31AD40009D351A /* LocalMessage.swift */; };
+		E2F9C7532C3AC3D700B049D9 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9C7522C3AC3D700B049D9 /* AudioRecorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		E2F63A1B2C31A984009D351A /* MKSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKSender.swift; sourceTree = "<group>"; };
 		E2F63A1D2C31AA4C009D351A /* MKMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMessage.swift; sourceTree = "<group>"; };
 		E2F63A202C31AD40009D351A /* LocalMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMessage.swift; sourceTree = "<group>"; };
+		E2F9C7522C3AC3D700B049D9 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		E74BB904DB28E19EF07052BE /* Pods-WhatsappClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappClone.release.xcconfig"; path = "Target Support Files/Pods-WhatsappClone/Pods-WhatsappClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,6 +212,7 @@
 				E24FE7772C32EE3600F58417 /* DBManager.swift */,
 				E24FE7792C32F2DD00F58417 /* OutgoingMessageHelper.swift */,
 				E233E0A92C343DBF0002B4D9 /* IncomingMessageHelper.swift */,
+				E2F9C7522C3AC3D700B049D9 /* AudioRecorder.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				E275A7632C36FF080029DE77 /* FirebaseTypingListener.swift in Sources */,
 				E24FE77C2C33006200F58417 /* FirebaseMessageListener.swift in Sources */,
 				E2F63A1C2C31A984009D351A /* MKSender.swift in Sources */,
+				E2F9C7532C3AC3D700B049D9 /* AudioRecorder.swift in Sources */,
 				E2F63A142C31A4F9009D351A /* MessageCellDelegate.swift in Sources */,
 				E27F27712C2BBFD9007875F0 /* Extension.swift in Sources */,
 				E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */,

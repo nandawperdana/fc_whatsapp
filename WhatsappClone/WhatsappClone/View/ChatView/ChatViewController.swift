@@ -382,6 +382,7 @@ class ChatViewController: MessagesViewController {
             audioDate = Date()
             audioFileName = Date().stringDate()
             // Start record
+            AudioRecorder.shared
         case .ended:
             // send audio message
             if fileExistsAtPath(audioFileName + ".m4a") {

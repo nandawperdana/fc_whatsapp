@@ -49,6 +49,10 @@ class ChatViewController: MessagesViewController {
     
     // MARK: Listener
     var notificationToken: NotificationToken?
+    var longPressGesture: UILongPressGestureRecognizer!
+    var audioFileName = ""
+    var audioDuration = 0
+    var audioDate: Date!
     
     // MARK: Inits
     init(chatId: String = "", recipientId: String = "", recipientName: String = "", recipientAvatar: String = "") {
@@ -71,6 +75,7 @@ class ChatViewController: MessagesViewController {
         configureHeaderView()
         configureBackgroundView()
         configureMessageCollectionView()
+        configureGestureRecognizer()
         configureMessageInputBar()
         configureCustomCell()
 //        configureImagePicker()
@@ -156,9 +161,7 @@ class ChatViewController: MessagesViewController {
             print("attach")
         }
         
-        micButton.onTouchUpInside { item in
-            print("attach")
-        }
+        micButton.addGestureRecognizer(longPressGesture)
         
         // Set button
         messageInputBar.sendButton.image = UIImage(systemName: "paperplane.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 24))
@@ -176,6 +179,12 @@ class ChatViewController: MessagesViewController {
             messageInputBar.setStackViewItems([messageInputBar.sendButton], forStack: .right, animated: false)
             messageInputBar.setRightStackViewWidthConstant(to: 24, animated: false)
         }
+    }
+    
+    private func configureGestureRecognizer() {
+        longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(recordAudio))
+        longPressGesture.minimumPressDuration = 0.5
+        longPressGesture.delaysTouchesBegan = true
     }
     
     private func configureCustomCell() {
@@ -365,6 +374,26 @@ class ChatViewController: MessagesViewController {
         }
         
         present(picker, animated: true, completion: nil)
+    }
+    
+    @objc func recordAudio() {
+        switch longPressGesture.state {
+        case .began:
+            audioDate = Date()
+            audioFileName = Date().stringDate()
+            // Start record
+        case .ended:
+            // send audio message
+            if fileExistsAtPath(audioFileName + ".m4a") {
+                // send audio message
+            } else {
+                print("no file found")
+            }
+            
+            audioFileName = ""
+        default:
+            print("default")
+        }
     }
     
     // MARK: Load Chats

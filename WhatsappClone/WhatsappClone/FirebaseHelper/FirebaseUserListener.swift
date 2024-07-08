@@ -207,17 +207,33 @@ class FirebaseUserListener {
         }
     }
     
+    func updateUserInFirebase(_ user: User) {
+        do {
+            try FirebaseReference(.User).document(user.id).setData(from: user)
+        } catch {
+            print("Error update user ", error.localizedDescription)
+        }
+    }
+    
     // MARK: - Logout
     func logoutUser(completion: @escaping (_ error: Error?) -> Void) {
         do {
-            try Auth.auth().signOut()
+            updateUserPushId(pushId: "")
             
+            try Auth.auth().signOut()
             UserDefaults.standard.removeObject(forKey: kCurrentUser)
             UserDefaults.standard.synchronize()
-            
             completion(nil)
         } catch let error as NSError {
             completion(error)
+        }
+    }
+    
+    private func updateUserPushId(pushId: String) {
+        if var user = User.currentUser {
+            user.pushId = pushId
+            saveUserLocally(user)
+            FirebaseUserListener.shared.updateUserInFirebase(user)
         }
     }
 }

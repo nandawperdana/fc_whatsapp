@@ -9,6 +9,7 @@ import Foundation
 
 public let kCurrentUser = "key_current_user"
 public let kStorageReference = "gs://whatsappclone-b7c74.appspot.com"
+public let kServerKey = "AAAAYaDnss0:APA91bHFwsxb0AaUaSYCVBQ3Lf8xquN1GHfOy6am4CvpeCA3efHs_vNeVm1byY_lKbJFF-q2Cv5h7Glm6KNgsdnPexOlVlZwaLPCyf6oahNh0rSkKu01Net-aU3ZT-rx1E0e7wWkWwOj"
 
 public let kChatRoomId = "chatRoomId"
 public let kSenderId = "senderId"

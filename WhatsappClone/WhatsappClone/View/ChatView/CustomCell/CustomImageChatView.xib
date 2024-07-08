@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomImageChatView" customModule="WhatsappClone" customModuleProvider="target">
+            <connections>
+                <outlet property="customView" destination="ejl-K7-Wul" id="r5U-g6-Vpc"/>
+                <outlet property="imageView" destination="FKP-V7-yPa" id="qnc-8h-jWk"/>
+                <outlet property="infoLabel" destination="YxV-q2-psj" id="n6u-6E-9wp"/>
+                <outlet property="leftBubble" destination="S5t-Gp-7wo" id="Bht-FN-orX"/>
+                <outlet property="rightBubble" destination="uFy-6N-WWC" id="qp2-82-Kbr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="545" height="295"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5t-Gp-7wo" userLabel="LeftBubble">
+                    <rect key="frame" x="20" y="279" width="16" height="16"/>
+                    <viewLayoutGuide key="safeArea" id="h5X-ZX-Qd0"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="Wg2-L5-qYT"/>
+                        <constraint firstAttribute="height" constant="16" id="Y5v-hY-B9S"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uFy-6N-WWC" userLabel="RightBubble">
+                    <rect key="frame" x="509" y="279" width="16" height="16"/>
+                    <viewLayoutGuide key="safeArea" id="Lp2-wI-Sju"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="jrY-mM-jcZ"/>
+                        <constraint firstAttribute="width" constant="16" id="ttP-7g-gq2"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejl-K7-Wul">
+                    <rect key="frame" x="20" y="0.0" width="505" height="295"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FKP-V7-yPa">
+                            <rect key="frame" x="12" y="12" width="481" height="251"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="InfoLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxV-q2-psj">
+                            <rect key="frame" x="12" y="271" width="481" height="12"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="FKP-V7-yPa" firstAttribute="leading" secondItem="ejl-K7-Wul" secondAttribute="leadingMargin" id="7QP-Ol-glN"/>
+                        <constraint firstAttribute="trailingMargin" secondItem="FKP-V7-yPa" secondAttribute="trailing" id="Ayv-wM-bIM"/>
+                        <constraint firstItem="YxV-q2-psj" firstAttribute="top" secondItem="FKP-V7-yPa" secondAttribute="bottom" constant="8" id="eDG-ei-1mt"/>
+                        <constraint firstAttribute="trailingMargin" secondItem="YxV-q2-psj" secondAttribute="trailing" id="kcc-U7-6Al"/>
+                        <constraint firstAttribute="bottomMargin" secondItem="YxV-q2-psj" secondAttribute="bottom" id="kzw-Rt-hTL"/>
+                        <constraint firstItem="YxV-q2-psj" firstAttribute="leading" secondItem="ejl-K7-Wul" secondAttribute="leadingMargin" id="mS0-uf-37j"/>
+                        <constraint firstItem="FKP-V7-yPa" firstAttribute="top" secondItem="ejl-K7-Wul" secondAttribute="topMargin" id="zqh-ze-eE5"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="ejl-K7-Wul" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="Cl2-c2-wKf"/>
+                <constraint firstItem="S5t-Gp-7wo" firstAttribute="bottom" secondItem="ejl-K7-Wul" secondAttribute="bottom" id="CtA-7X-ZB6"/>
+                <constraint firstAttribute="bottomMargin" secondItem="ejl-K7-Wul" secondAttribute="bottom" id="Fy0-M9-hCx"/>
+                <constraint firstItem="ejl-K7-Wul" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="TbX-1F-3pB"/>
+                <constraint firstItem="S5t-Gp-7wo" firstAttribute="leading" secondItem="ejl-K7-Wul" secondAttribute="leading" id="cX5-Fq-Kyp"/>
+                <constraint firstItem="uFy-6N-WWC" firstAttribute="bottom" secondItem="ejl-K7-Wul" secondAttribute="bottom" id="fIi-YW-Okw"/>
+                <constraint firstItem="ejl-K7-Wul" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="srD-fI-axk"/>
+                <constraint firstItem="uFy-6N-WWC" firstAttribute="trailing" secondItem="ejl-K7-Wul" secondAttribute="trailing" id="xuC-4e-xbA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+            <point key="canvasLocation" x="26.717557251908396" y="84.154929577464799"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

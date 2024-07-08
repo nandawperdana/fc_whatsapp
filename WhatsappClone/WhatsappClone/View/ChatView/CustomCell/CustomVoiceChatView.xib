@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomVoiceChatView" customModule="WhatsappClone" customModuleProvider="target">
+            <connections>
+                <outlet property="customView" destination="j4Z-Lc-nIs" id="Io4-EA-obQ"/>
+                <outlet property="durationLabel" destination="iWr-Qj-YmO" id="6QQ-Qq-psT"/>
+                <outlet property="infoLabel" destination="07c-1Z-zLP" id="r56-KY-FGF"/>
+                <outlet property="leftBubble" destination="kvm-rG-jOR" id="tql-zZ-1rr"/>
+                <outlet property="playImageView" destination="9GC-Ey-Hk5" id="cDO-sX-5Rl"/>
+                <outlet property="rightBubble" destination="czT-C0-2HQ" id="5DD-GB-hDZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kvm-rG-jOR" userLabel="LeftBubble">
+                    <rect key="frame" x="16" y="84" width="16" height="16"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="N1B-z9-K8c"/>
+                        <constraint firstAttribute="height" constant="16" id="pVo-Wo-rIr"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czT-C0-2HQ" userLabel="RightBubble">
+                    <rect key="frame" x="208" y="84" width="16" height="16"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="A5B-5J-pPd"/>
+                        <constraint firstAttribute="height" constant="16" id="e8T-E6-fJb"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4Z-Lc-nIs">
+                    <rect key="frame" x="16" y="0.0" width="208" height="100"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfT-JH-7mb">
+                            <rect key="frame" x="12" y="12" width="184" height="56"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9GC-Ey-Hk5">
+                                    <rect key="frame" x="8" y="22.666666666666664" width="15" height="11.000000000000007"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="15" id="1Fo-G1-Q99"/>
+                                        <constraint firstAttribute="height" constant="15" id="iw3-37-W1y"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWr-Qj-YmO">
+                                    <rect key="frame" x="31" y="22" width="23" height="12"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waveform" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Drr-Fb-jiZ">
+                                    <rect key="frame" x="110" y="18" width="66" height="20.333333333333336"/>
+                                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="E13-SS-dcb"/>
+                                        <constraint firstAttribute="width" secondItem="Drr-Fb-jiZ" secondAttribute="height" multiplier="22:7" id="ENz-BN-hCF"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.88188230990000005" green="0.97083717579999995" blue="0.79605334999999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstItem="Drr-Fb-jiZ" firstAttribute="centerY" secondItem="lfT-JH-7mb" secondAttribute="centerY" id="3GN-SL-yzL"/>
+                                <constraint firstItem="iWr-Qj-YmO" firstAttribute="centerY" secondItem="lfT-JH-7mb" secondAttribute="centerY" id="4kk-xE-8Im"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="Drr-Fb-jiZ" secondAttribute="trailing" id="Gij-8B-fmZ"/>
+                                <constraint firstItem="9GC-Ey-Hk5" firstAttribute="leading" secondItem="lfT-JH-7mb" secondAttribute="leadingMargin" id="Ucd-XH-USH"/>
+                                <constraint firstItem="9GC-Ey-Hk5" firstAttribute="centerY" secondItem="lfT-JH-7mb" secondAttribute="centerY" id="Zl0-v2-zp4"/>
+                                <constraint firstItem="iWr-Qj-YmO" firstAttribute="leading" secondItem="9GC-Ey-Hk5" secondAttribute="trailing" constant="8" id="pxR-ou-coT"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InfoLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07c-1Z-zLP" userLabel="Info">
+                            <rect key="frame" x="12" y="76" width="184" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="12" id="m0F-Ig-sjw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="lfT-JH-7mb" firstAttribute="leading" secondItem="j4Z-Lc-nIs" secondAttribute="leadingMargin" id="2SS-KU-jez"/>
+                        <constraint firstAttribute="trailingMargin" secondItem="07c-1Z-zLP" secondAttribute="trailing" id="72D-Yk-YIF"/>
+                        <constraint firstAttribute="bottomMargin" secondItem="07c-1Z-zLP" secondAttribute="bottom" id="7hy-ti-atH"/>
+                        <constraint firstItem="07c-1Z-zLP" firstAttribute="leading" secondItem="j4Z-Lc-nIs" secondAttribute="leadingMargin" id="Avq-K3-8D9"/>
+                        <constraint firstItem="lfT-JH-7mb" firstAttribute="top" secondItem="j4Z-Lc-nIs" secondAttribute="topMargin" id="DlJ-Gs-x3b"/>
+                        <constraint firstItem="07c-1Z-zLP" firstAttribute="top" secondItem="lfT-JH-7mb" secondAttribute="bottom" constant="8" id="V0c-AC-mME"/>
+                        <constraint firstItem="lfT-JH-7mb" firstAttribute="trailing" secondItem="j4Z-Lc-nIs" secondAttribute="trailingMargin" id="pUX-2V-x89"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="12" left="12" bottom="12" right="12"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="kvm-rG-jOR" firstAttribute="leading" secondItem="j4Z-Lc-nIs" secondAttribute="leading" id="4Sw-LP-51I"/>
+                <constraint firstItem="kvm-rG-jOR" firstAttribute="bottom" secondItem="j4Z-Lc-nIs" secondAttribute="bottom" id="4WP-kJ-Xvg"/>
+                <constraint firstItem="j4Z-Lc-nIs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="6ms-jG-3li"/>
+                <constraint firstAttribute="trailingMargin" secondItem="j4Z-Lc-nIs" secondAttribute="trailing" id="7Sp-jP-7Lm"/>
+                <constraint firstItem="j4Z-Lc-nIs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="Xz4-5V-hMn"/>
+                <constraint firstItem="czT-C0-2HQ" firstAttribute="trailing" secondItem="j4Z-Lc-nIs" secondAttribute="trailing" id="cK4-3L-nD4"/>
+                <constraint firstItem="czT-C0-2HQ" firstAttribute="bottom" secondItem="j4Z-Lc-nIs" secondAttribute="bottom" id="o0L-h0-Mgm"/>
+                <constraint firstAttribute="bottom" secondItem="j4Z-Lc-nIs" secondAttribute="bottom" id="xHL-7a-dxD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+            <point key="canvasLocation" x="-15.267175572519083" y="-160.56338028169014"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <image name="waveform" catalog="system" width="125" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

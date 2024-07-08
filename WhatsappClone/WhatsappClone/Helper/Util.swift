@@ -48,3 +48,15 @@ func timeElapsed(date: Date) -> String {
     
     return elapsed
 }
+
+// MARK: User utils
+func removeCurrentUser(from userIds: [String]) -> [String] {
+    var allIds = userIds
+    
+    for id in allIds {
+        if id == User.currentID {
+            allIds.remove(at: allIds.firstIndex(of: id)!)
+        }
+    }
+    return allIds
+}

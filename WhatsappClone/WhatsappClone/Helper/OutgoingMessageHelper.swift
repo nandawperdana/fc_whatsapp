@@ -35,6 +35,9 @@ class OutgoingMessageHelper {
             sendAudioMessage(message: message, audioFileName: audio, audioDuration: audioDuration, memberIds: memberIds)
         }
         
+        // Send push notification
+        PushNotificationService.shared.sendPushNotificationTo(userIds: removeCurrentUser(from: memberIds), body: message.message, chatRoomId: chatId)
+        
         FirebaseRecentChatListener.shared.updateRecentChat(chatRoomId: chatId, lastMessage: message.message)
     }
     

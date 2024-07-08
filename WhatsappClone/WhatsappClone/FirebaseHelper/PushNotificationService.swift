@@ -18,6 +18,7 @@ class PushNotificationService {
             for user in allUsers {
                 let title = User.currentUser?.username ?? "User"
                 
+                print("send push notif to \(user.pushId)")
                 // Send push
                 self.sendMessage(to: user.pushId, title: title, body: body, chatRoomId: chatRoomId)
             }
@@ -48,5 +49,7 @@ class PushNotificationService {
         let task = URLSession.shared.dataTask(with: request as URLRequest)
         
         task.resume()
+        
+        print("request method \(task.state)")
     }
 }

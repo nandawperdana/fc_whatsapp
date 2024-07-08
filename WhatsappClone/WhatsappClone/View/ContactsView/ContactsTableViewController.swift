@@ -102,8 +102,7 @@ class ContactsTableViewController: UITableViewController {
     // MARK: - Navigation
     private func navigateToProfileScreen(_ user: User) {
         let profileView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ProfileView") as! ProfileTableViewController
-        
-        profileView.user = user
+        profileView.viewModel = ProfileViewModel(user: user)
         self.navigationController?.pushViewController(profileView, animated: true)
     }
 }

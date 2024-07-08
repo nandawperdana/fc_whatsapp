@@ -319,7 +319,8 @@ class ChatViewController: MessagesViewController {
         let profileView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "ProfileView") as! ProfileTableViewController
         
         FirebaseUserListener.shared.getUser(by: recipientId) { user in
-            profileView.user = user
+            guard let user = user else { return }
+            profileView.viewModel = ProfileViewModel(user: user)
             self.navigationController?.pushViewController(profileView, animated: true)
         }
     }

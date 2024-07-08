@@ -37,13 +37,13 @@
 		E2A57A972C290501005BBD40 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A57A962C290501005BBD40 /* ContactsTableViewController.swift */; };
 		E2B0CF7E2C0B619A006CA5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF7D2C0B619A006CA5A5 /* AppDelegate.swift */; };
 		E2B0CF802C0B619A006CA5A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF7F2C0B619A006CA5A5 /* SceneDelegate.swift */; };
-		E2B0CF822C0B619A006CA5A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0CF812C0B619A006CA5A5 /* ViewController.swift */; };
 		E2B0CF852C0B619A006CA5A5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E2B0CF842C0B619A006CA5A5 /* Base */; };
 		E2B0CF872C0B619C006CA5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2B0CF862C0B619C006CA5A5 /* Assets.xcassets */; };
 		E2B0CF8A2C0B619C006CA5A5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E2B0CF892C0B619C006CA5A5 /* Base */; };
 		E2B5D0812C3AEAFF00CC1AA1 /* BasicAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5D0802C3AEAFF00CC1AA1 /* BasicAudioController.swift */; };
 		E2BC5D022C14A4B900654538 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC5D012C14A4B900654538 /* Constants.swift */; };
 		E2DCB5A32C3C1D4A0085EEC0 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCB5A22C3C1D4A0085EEC0 /* PushNotificationService.swift */; };
+		E2DCB5AC2C3C3A580085EEC0 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCB5AB2C3C3A580085EEC0 /* ProfileViewModel.swift */; };
 		E2E9EBF02C11F019003E1B06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E9EBEF2C11F018003E1B06 /* User.swift */; };
 		E2E9EBF72C11F461003E1B06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */; };
 		E2F63A122C31A47A009D351A /* MessagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A112C31A47A009D351A /* MessagesDataSource.swift */; };
@@ -93,7 +93,6 @@
 		E2B0CF7A2C0B619A006CA5A5 /* WhatsappClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsappClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B0CF7D2C0B619A006CA5A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2B0CF7F2C0B619A006CA5A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E2B0CF812C0B619A006CA5A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E2B0CF842C0B619A006CA5A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2B0CF862C0B619C006CA5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2B0CF892C0B619C006CA5A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,6 +101,7 @@
 		E2B5D0832C3AFBD000CC1AA1 /* WhatsappClone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhatsappClone.entitlements; sourceTree = "<group>"; };
 		E2BC5D012C14A4B900654538 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E2DCB5A22C3C1D4A0085EEC0 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
+		E2DCB5AB2C3C3A580085EEC0 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		E2E9EBEF2C11F018003E1B06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2F63A112C31A47A009D351A /* MessagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDataSource.swift; sourceTree = "<group>"; };
@@ -184,12 +184,11 @@
 			isa = PBXGroup;
 			children = (
 				E21E5E932C3055F8004C2BE8 /* ChatView */,
-				E27F276D2C2BB913007875F0 /* RecentChatsView */,
 				E2A57A932C290443005BBD40 /* ContactsView */,
+				E2DCB5A92C3C39FD0085EEC0 /* LoginView */,
+				E2DCB5A82C3C39F50085EEC0 /* ProfileView */,
+				E27F276D2C2BB913007875F0 /* RecentChatsView */,
 				E2A57A8A2C280BCB005BBD40 /* SettingsView */,
-				E2B0CF812C0B619A006CA5A5 /* ViewController.swift */,
-				E242B5062C0E0B0100642697 /* LoginViewController.swift */,
-				E22CA0EC2C29D37300A736AE /* ProfileTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -262,12 +261,13 @@
 		E2B0CF7C2C0B619A006CA5A5 /* WhatsappClone */ = {
 			isa = PBXGroup;
 			children = (
+				E2E9EBEE2C11F005003E1B06 /* Model */,
+				E2A57A892C280B8D005BBD40 /* View */,
+				E2DCB5AA2C3C3A270085EEC0 /* ViewModel */,
 				E2B5D0832C3AFBD000CC1AA1 /* WhatsappClone.entitlements */,
 				E2A57A902C287114005BBD40 /* Helper */,
 				E2A57A8D2C28360F005BBD40 /* FirebaseHelper */,
-				E2A57A892C280B8D005BBD40 /* View */,
 				E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */,
-				E2E9EBEE2C11F005003E1B06 /* Model */,
 				E2B0CF7D2C0B619A006CA5A5 /* AppDelegate.swift */,
 				E2B0CF7F2C0B619A006CA5A5 /* SceneDelegate.swift */,
 				E2B0CF832C0B619A006CA5A5 /* Main.storyboard */,
@@ -279,16 +279,40 @@
 			path = WhatsappClone;
 			sourceTree = "<group>";
 		};
+		E2DCB5A82C3C39F50085EEC0 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				E22CA0EC2C29D37300A736AE /* ProfileTableViewController.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		E2DCB5A92C3C39FD0085EEC0 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				E242B5062C0E0B0100642697 /* LoginViewController.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		E2DCB5AA2C3C3A270085EEC0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E2DCB5AB2C3C3A580085EEC0 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		E2E9EBEE2C11F005003E1B06 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E2F63A1F2C31AD32009D351A /* DBModel */,
-				E2E9EBEF2C11F018003E1B06 /* User.swift */,
-				E29F2A412C2A826E001C590F /* RecentChat.swift */,
-				E2F63A1B2C31A984009D351A /* MKSender.swift */,
-				E2F63A1D2C31AA4C009D351A /* MKMessage.swift */,
-				E26F172A2C39A8E300713995 /* PhotoMessage.swift */,
 				E2F9C7542C3AD4CB00B049D9 /* AudioMessage.swift */,
+				E2F63A1D2C31AA4C009D351A /* MKMessage.swift */,
+				E2F63A1B2C31A984009D351A /* MKSender.swift */,
+				E26F172A2C39A8E300713995 /* PhotoMessage.swift */,
+				E29F2A412C2A826E001C590F /* RecentChat.swift */,
+				E2E9EBEF2C11F018003E1B06 /* User.swift */,
+				E2F63A1F2C31AD32009D351A /* DBModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -435,7 +459,6 @@
 				E242B5072C0E0B0100642697 /* LoginViewController.swift in Sources */,
 				E2B5D0812C3AEAFF00CC1AA1 /* BasicAudioController.swift in Sources */,
 				E2F63A1A2C31A5C4009D351A /* InputBarAccessoryViewDelegate.swift in Sources */,
-				E2B0CF822C0B619A006CA5A5 /* ViewController.swift in Sources */,
 				E21E5E952C305616004C2BE8 /* ChatViewController.swift in Sources */,
 				E251516F2C2D181B0038741C /* FirebaseRecentChatListener.swift in Sources */,
 				E251516D2C2CF6590038741C /* StartChatHelper.swift in Sources */,
@@ -461,6 +484,7 @@
 				E2F63A212C31AD40009D351A /* LocalMessage.swift in Sources */,
 				E2A57A922C287124005BBD40 /* Util.swift in Sources */,
 				E2F63A122C31A47A009D351A /* MessagesDataSource.swift in Sources */,
+				E2DCB5AC2C3C3A580085EEC0 /* ProfileViewModel.swift in Sources */,
 				E233E0AA2C343DBF0002B4D9 /* IncomingMessageHelper.swift in Sources */,
 				E25151752C2D229E0038741C /* RecentChatTableViewController.swift in Sources */,
 				E2A57A8F2C283687005BBD40 /* FirebaseStorageHelper.swift in Sources */,

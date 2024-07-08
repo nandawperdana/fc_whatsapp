@@ -44,6 +44,8 @@
 		E2BC5D022C14A4B900654538 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC5D012C14A4B900654538 /* Constants.swift */; };
 		E2DCB5A32C3C1D4A0085EEC0 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCB5A22C3C1D4A0085EEC0 /* PushNotificationService.swift */; };
 		E2DCB5AC2C3C3A580085EEC0 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCB5AB2C3C3A580085EEC0 /* ProfileViewModel.swift */; };
+		E2DCB5AE2C3C41810085EEC0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCB5AD2C3C41800085EEC0 /* ProfileView.swift */; };
+		E2DCB5B02C3C44C20085EEC0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCB5AF2C3C44C20085EEC0 /* ProfileViewController.swift */; };
 		E2E9EBF02C11F019003E1B06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E9EBEF2C11F018003E1B06 /* User.swift */; };
 		E2E9EBF72C11F461003E1B06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */; };
 		E2F63A122C31A47A009D351A /* MessagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A112C31A47A009D351A /* MessagesDataSource.swift */; };
@@ -102,6 +104,8 @@
 		E2BC5D012C14A4B900654538 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E2DCB5A22C3C1D4A0085EEC0 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
 		E2DCB5AB2C3C3A580085EEC0 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		E2DCB5AD2C3C41800085EEC0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E2DCB5AF2C3C44C20085EEC0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E2E9EBEF2C11F018003E1B06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2F63A112C31A47A009D351A /* MessagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDataSource.swift; sourceTree = "<group>"; };
@@ -283,6 +287,8 @@
 			isa = PBXGroup;
 			children = (
 				E22CA0EC2C29D37300A736AE /* ProfileTableViewController.swift */,
+				E2DCB5AD2C3C41800085EEC0 /* ProfileView.swift */,
+				E2DCB5AF2C3C44C20085EEC0 /* ProfileViewController.swift */,
 			);
 			path = ProfileView;
 			sourceTree = "<group>";
@@ -458,6 +464,7 @@
 			files = (
 				E242B5072C0E0B0100642697 /* LoginViewController.swift in Sources */,
 				E2B5D0812C3AEAFF00CC1AA1 /* BasicAudioController.swift in Sources */,
+				E2DCB5AE2C3C41810085EEC0 /* ProfileView.swift in Sources */,
 				E2F63A1A2C31A5C4009D351A /* InputBarAccessoryViewDelegate.swift in Sources */,
 				E21E5E952C305616004C2BE8 /* ChatViewController.swift in Sources */,
 				E251516F2C2D181B0038741C /* FirebaseRecentChatListener.swift in Sources */,
@@ -497,6 +504,7 @@
 				E217CF5F2C2724EC00E554AD /* SettingsTableViewController.swift in Sources */,
 				E2DCB5A32C3C1D4A0085EEC0 /* PushNotificationService.swift in Sources */,
 				E26F172B2C39A8E300713995 /* PhotoMessage.swift in Sources */,
+				E2DCB5B02C3C44C20085EEC0 /* ProfileViewController.swift in Sources */,
 				E2F9C7592C3AD8DB00B049D9 /* CustomVoiceChatView.swift in Sources */,
 				E28FBB512C35908100454DD7 /* CustomTextChatView.swift in Sources */,
 			);

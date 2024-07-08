@@ -43,6 +43,7 @@
 		E2B0CF8A2C0B619C006CA5A5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E2B0CF892C0B619C006CA5A5 /* Base */; };
 		E2B5D0812C3AEAFF00CC1AA1 /* BasicAudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5D0802C3AEAFF00CC1AA1 /* BasicAudioController.swift */; };
 		E2BC5D022C14A4B900654538 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BC5D012C14A4B900654538 /* Constants.swift */; };
+		E2DCB5A32C3C1D4A0085EEC0 /* PushNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DCB5A22C3C1D4A0085EEC0 /* PushNotificationService.swift */; };
 		E2E9EBF02C11F019003E1B06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E9EBEF2C11F018003E1B06 /* User.swift */; };
 		E2E9EBF72C11F461003E1B06 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */; };
 		E2F63A122C31A47A009D351A /* MessagesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F63A112C31A47A009D351A /* MessagesDataSource.swift */; };
@@ -100,6 +101,7 @@
 		E2B5D0802C3AEAFF00CC1AA1 /* BasicAudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAudioController.swift; sourceTree = "<group>"; };
 		E2B5D0832C3AFBD000CC1AA1 /* WhatsappClone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhatsappClone.entitlements; sourceTree = "<group>"; };
 		E2BC5D012C14A4B900654538 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E2DCB5A22C3C1D4A0085EEC0 /* PushNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationService.swift; sourceTree = "<group>"; };
 		E2E9EBEF2C11F018003E1B06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E2E9EBF62C11F461003E1B06 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E2F63A112C31A47A009D351A /* MessagesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesDataSource.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				E251516E2C2D181B0038741C /* FirebaseRecentChatListener.swift */,
 				E24FE77B2C33006200F58417 /* FirebaseMessageListener.swift */,
 				E275A7622C36FF080029DE77 /* FirebaseTypingListener.swift */,
+				E2DCB5A22C3C1D4A0085EEC0 /* PushNotificationService.swift */,
 			);
 			path = FirebaseHelper;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				E2BC5D022C14A4B900654538 /* Constants.swift in Sources */,
 				E2F9C7552C3AD4CB00B049D9 /* AudioMessage.swift in Sources */,
 				E217CF5F2C2724EC00E554AD /* SettingsTableViewController.swift in Sources */,
+				E2DCB5A32C3C1D4A0085EEC0 /* PushNotificationService.swift in Sources */,
 				E26F172B2C39A8E300713995 /* PhotoMessage.swift in Sources */,
 				E2F9C7592C3AD8DB00B049D9 /* CustomVoiceChatView.swift in Sources */,
 				E28FBB512C35908100454DD7 /* CustomTextChatView.swift in Sources */,
